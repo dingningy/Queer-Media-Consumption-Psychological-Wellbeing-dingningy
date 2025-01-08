@@ -20,3 +20,13 @@ under the pink tax. This study contributes to a more comprehensive understanding
 negative impacts on female consumers’ purchase decision-making and work attitudes as employees, 
 calling for companies to engage in practices that eliminate the pink tax and human resource 
 management to narrow the gender pay gap and alleviate the pink tax’s economic burden on women.
+
+# Acknowledgement
+ Firstly, special thanks go to the Undergraduate Research Award Committee, which provided 
+abundant funding resources to support participant recruitment of this study. 
+I would also like to thank the instructors who have provided me with continuous guidance: 
+Prof. Iris W. Hung, Prof. Jiyin Cao, and Prof. Chenchen Di. This study has greatly benefited from 
+their insights.
+ Last but not least, my gratitude goes to my parents, whose love and support encouraged me 
+through the long way.
+
