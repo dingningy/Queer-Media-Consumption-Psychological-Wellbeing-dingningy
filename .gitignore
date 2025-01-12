@@ -47,3 +47,14 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Ignore the localonly directory
+localonly/
+
+# Ignore specific file types that should remain local
+*.log         # Log files
+*.tmp         # Temporary files
+*.env         # Environment variable files
+
+# Ignore a specific file that should be ignored (not in the ignored folder)
+config/local_settings.json
