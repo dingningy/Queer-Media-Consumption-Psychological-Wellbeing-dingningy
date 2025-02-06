@@ -204,3 +204,27 @@ queer.merge <- queer.merge %>%
 # I suddenly felt that education does not matter in this study, delete
 queer.merge <- queer.merge %>%
   select(-education)
+
+
+## Verify column values and change if necessary: Media consumption habits
+
+# Reorder the columns before media types
+queer.merge <- queer.merge %>%
+  relocate (actively_seek_out, discussion, .after = "frequency")   # These three will remain ordered factor variables to facilitate later data visualization
+
+# Media type
+# As for the media type, I will keep the original data to facilitate later data analysis (i.e., frequency of media types)
+
+# Unify names in different media types
+queer.merge <- queer.merge %>%
+  mutate(across(c(12:19), str_to_title))
+
+
+## Verify column values and change if necessary: Ratings
+# Check if there is missing value
+na_summary <- queer.merge %>%
+  summarise(across(20:51, ~ sum(is.na(.)), .names = "na_count_col_{col}")) # No missing values!
+
+
+## Write the cleaned dataset to a new CSV file
+write_csv(queer.merge, file.path("data","queer.cleaned.csv"))
