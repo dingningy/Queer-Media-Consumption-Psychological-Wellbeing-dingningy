@@ -1,0 +1,168 @@
+ID,age,country,gender_identity,transgender,sexual_orientation,race,frequency,actively_seek_out,discussion,authenticity_rating,intersectionality_rating,psychological_wellbeing_score,individual_development,community_belonging,emotional_well_being
+1,23,Canada,"Nonbinary, genderfluid, two-spirit, or gender non-conforming",0,Gay or Lesbian,White,A few times per month,Rarely,Rarely,3.71,3.25,3.67,3.14,4.67,3.38
+2,26,Canada,Man,0,Bisexual,White,A few times per year,Rarely,Rarely,3.43,3.25,2.33,2.43,2.67,2
+3,26,Canada,Woman,0,Bisexual,Asian,A few times per year,Never,Never,1.86,1,1.76,1.57,1.67,2
+4,30,Canada,Woman,0,Bisexual,White,A few times per month,Rarely,Never,4,4.75,2.57,2.57,2.17,2.88
+5,31,Canada,Woman,0,Gay or Lesbian,White,A few times per week,Often,Never,3.43,3.75,4.9,4.57,5,5.12
+6,31,Canada,"Nonbinary, genderfluid, two-spirit, or gender non-conforming",1,Asexual,American Indian or Alaska Native,A few times per year,Never,Rarely,4.14,4.75,4.39,5.29,4.67,3.38
+7,33,Canada,Woman,0,Bisexual,White,A few times per year,Sometimes,Rarely,4.14,2.25,3.47,3.14,3.83,3.5
+8,40,Canada,Man,0,Gay or Lesbian,White,A few times per month,Often,Rarely,3.14,4.75,5.43,5.57,6,4.88
+9,42,Canada,Woman,0,Gay or Lesbian,Asian,A few times per year,Sometimes,Rarely,3.43,3,3.19,3.57,3,3
+10,25,Czech Republic,Man,0,Asexual,White,A few times per week,Often,Rarely,4.43,3.5,4.62,4.43,4.83,4.62
+11,26,Czech Republic,"Nonbinary, genderfluid, two-spirit, or gender non-conforming",1,Pansexual,White,A few times per year,Sometimes,Often,3.43,4.25,3.81,4,3.83,3.62
+12,26,France,Man,0,Bisexual,White,A few times per week,Rarely,Rarely,2.43,5.25,3,2.57,2.17,4
+14,22,Germany,Woman,0,Bisexual,White,A few times per week,Sometimes,Sometimes,5.14,5,5.19,5.14,5.67,4.88
+15,25,Germany,Man,0,Bisexual,White,A few times per year,Rarely,Never,3.86,4,4.62,4.71,5,4.25
+16,25,Germany,Man,0,Gay or Lesbian,Not specified,A few times per month,Rarely,Never,3.29,3.25,2.91,2.86,3.17,2.75
+17,25,Germany,Man,1,Bisexual,White,A few times per week,Often,Sometimes,5.71,5,5.52,5.29,5.67,5.62
+18,26,Germany,Man,0,Bisexual,White,A few times per week,Rarely,Rarely,2.43,1.75,1.76,2,2,1.38
+19,31,Germany,Man,0,Gay or Lesbian,Asian,A few times per month,Sometimes,Rarely,3.43,2.5,3.91,3.86,4,3.88
+20,29,Greece,"Nonbinary, genderfluid, two-spirit, or gender non-conforming",0,Asexual,White,A few times per month,Sometimes,Rarely,3.71,3,2.76,3.14,2.83,2.38
+21,27,Indonesia,Woman,0,Bisexual,Asian,A few times per week,Often,Rarely,2.43,3.75,3.95,3.43,3.67,4.62
+22,32,Ireland,Woman,0,Gay or Lesbian,White,A few times per year,Often,Sometimes,4.57,4.5,4.86,5,5,4.62
+23,32,Ireland,Woman,0,Pansexual,White,A few times per month,Sometimes,Rarely,3.29,4.25,5.33,5.43,5.67,5
+24,33,Japan,Woman,0,Bisexual,White,A few times per month,Sometimes,Sometimes,3.86,4.25,4.52,4.71,4.67,4.25
+25,42,Japan,Woman,0,Bisexual,White,A few times per week,Sometimes,Never,3,4.25,3.43,3,4,3.38
+26,31,Latvia,Woman,0,Bisexual,White,A few times per week,Never,Never,2.29,4.5,1.81,1.86,1.33,2.12
+27,33,Norway,Man,0,Gay or Lesbian,White,A few times per week,Always,Often,4.86,5,3.95,3.14,4.5,4.25
+28,26,Poland,Woman,0,Bisexual,White,A few times per year,Rarely,Sometimes,3.71,2,3.57,3.14,3.67,3.88
+29,47,Poland,Woman,0,Bisexual,White,A few times per month,Sometimes,Rarely,4,5,3.67,3.43,4.33,3.38
+30,25,Portugal,Woman,0,Asexual,White,A few times per year,Rarely,Sometimes,4.43,5,4.47,4.57,4.83,4.12
+32,19,South Africa,Woman,0,Asexual,Black or African-American,Daily,Always,Always,4.14,5.25,5.24,5.71,5.33,4.75
+33,20,South Africa,Woman,0,Bisexual,Black or African-American,Daily,Rarely,Often,3.29,4.75,5.1,5,5.67,4.75
+34,21,South Africa,Woman,0,Bisexual,Black or African-American,A few times per week,Never,Sometimes,4,4.25,3.95,3.29,5,3.75
+35,21,South Africa,Woman,0,Bisexual,Black or African-American,A few times per week,Often,Sometimes,4.43,5.75,5.71,5.71,6,5.5
+36,21,South Africa,Woman,1,Bisexual,Black or African-American,A few times per week,Rarely,Rarely,4.14,3.75,5.34,5.43,5.17,5.38
+37,22,South Africa,Woman,0,Asexual,Black or African-American,A few times per month,Never,Never,4,3.5,1.29,1,1.67,1.25
+38,22,South Africa,Man,0,Asexual,Black or African-American,Daily,Sometimes,Sometimes,4.14,4.5,4.33,4.57,3.83,4.5
+39,23,South Africa,Woman,0,Bisexual,Black or African-American,Daily,Always,Always,3.86,6,5.71,5.14,6,6
+40,25,South Africa,Woman,0,Asexual,Black or African-American,A few times per week,Never,Sometimes,4.86,6,5.81,6,5.33,6
+41,27,South Africa,Woman,0,Asexual,Black or African-American,Daily,Rarely,Sometimes,3.71,6,5.43,5.29,5.83,5.25
+42,28,South Africa,Woman,0,Bisexual,Black or African-American,A few times per month,Never,Sometimes,2.86,3.5,3.33,2.71,4.17,3.25
+43,28,South Africa,Woman,0,Bisexual,Black or African-American,Daily,Often,Often,4.71,6,6,6,6,6
+44,28,South Africa,Woman,0,Asexual,Black or African-American,Daily,Rarely,Sometimes,4.14,4.75,4.95,5.86,4.17,4.75
+45,31,South Africa,Man,0,Bisexual,Black or African-American,Daily,Sometimes,Sometimes,4.57,5.5,4.95,4.57,5.5,4.88
+46,33,South Africa,Man,0,Bisexual,Black or African-American,A few times per month,Never,Rarely,3.14,3.5,1.43,1.29,1.83,1.25
+47,36,South Africa,Woman,0,Gay or Lesbian,Black or African-American,A few times per week,Often,Sometimes,4.86,5,5,5,5,5
+48,41,South Africa,Woman,0,Asexual,Black or African-American,Daily,Sometimes,Sometimes,4.29,5,5.24,5,5.33,5.38
+49,43,South Africa,Woman,0,Bisexual,Black or African-American,A few times per week,Sometimes,Sometimes,4.14,5,5.09,5,5.33,5
+51,50,South Africa,Man,0,Asexual,Black or African-American,Daily,Often,Often,4.43,5.5,5.14,5.14,4.67,5.5
+52,55,South Africa,Man,0,Asexual,Asian,A few times per month,Sometimes,Often,3.86,5.25,5.33,5.29,5.83,5
+53,72,South Africa,Woman,1,Bisexual,Black or African-American,A few times per month,Sometimes,Rarely,4.14,4.75,4.81,5.29,5.5,3.88
+54,24,Spain,Woman,0,Bisexual,White,A few times per week,Sometimes,Sometimes,4.14,4,3.66,3.71,3.67,3.62
+55,25,Spain,Woman,1,Asexual,White,Daily,Always,Always,4,4.25,5.1,4.86,4.83,5.5
+56,26,Spain,Man,0,Bisexual,White,A few times per year,Never,Sometimes,2.43,2,1.05,1,1.17,1
+57,27,Spain,Man,0,Bisexual,White,A few times per month,Sometimes,Sometimes,3.14,2,4.14,4.14,4.17,4.12
+58,27,Spain,Woman,0,Gay or Lesbian,White,A few times per week,Always,Often,4.43,4,4.09,4.43,3.67,4.12
+59,31,Spain,Man,0,Bisexual,White,A few times per week,Sometimes,Often,4.57,5.5,5.67,5.57,6,5.5
+60,34,Spain,Woman,0,Bisexual,White,A few times per week,Never,Rarely,2.43,4.75,3.23,2.71,3.33,3.62
+61,44,Spain,Woman,0,Bisexual,White,A few times per month,Sometimes,Rarely,4.14,5.25,3.38,3.43,4,2.88
+62,50,Spain,Man,0,Bisexual,White,A few times per week,Sometimes,Often,3.86,4.25,4.19,4.29,4.17,4.12
+63,30,Sweden,Man,1,Bisexual,White,A few times per year,Never,Never,3.86,4.25,2.95,2.43,3.5,3
+64,18,United Kingdom,Woman,0,Asexual,Not specified,A few times per month,Often,Always,4,5,5.43,5.43,6,5
+65,20,United Kingdom,Woman,0,Bisexual,Asian,A few times per week,Sometimes,Rarely,4.71,2.75,4.14,4.29,3.33,4.62
+66,20,United Kingdom,Woman,0,Bisexual,White,A few times per week,Sometimes,Never,3.29,4,3.62,3.43,3.67,3.75
+67,20,United Kingdom,Woman,0,Asexual,Black or African-American,A few times per week,Sometimes,Sometimes,3.86,4.25,4.29,4.29,4,4.5
+68,21,United Kingdom,Woman,0,Gay or Lesbian,Asian,Daily,Often,Often,4.43,4.25,4.38,4.14,4.5,4.5
+69,21,United Kingdom,"Nonbinary, genderfluid, two-spirit, or gender non-conforming",1,Asexual,White,A few times per week,Sometimes,Often,4.14,4.75,4.62,4.71,4.83,4.38
+70,22,United Kingdom,Woman,0,Gay or Lesbian,White,A few times per week,Often,Often,4.57,5,4.29,4,5,4
+71,22,United Kingdom,Woman,0,Bisexual,White,A few times per week,Sometimes,Never,3.57,4.5,4.71,4.14,5,5
+72,23,United Kingdom,Woman,0,Pansexual,"Black or African-American,White",A few times per week,Often,Sometimes,4.14,6,5.95,5.86,6,6
+74,23,United Kingdom,Man,0,Bisexual,White,A few times per week,Sometimes,Often,4.29,4.5,5.71,5.57,6,5.62
+75,24,United Kingdom,Woman,0,Bisexual,White,Daily,Sometimes,Rarely,3.86,4.25,3.9,4.57,3.33,3.75
+76,25,United Kingdom,Woman,0,Asexual,Black or African-American,Daily,Sometimes,Sometimes,3.86,3.5,4.04,4.14,4.5,3.62
+77,26,United Kingdom,Man,1,Bisexual,White,A few times per week,Rarely,Never,1.86,3,1,1,1,1
+78,26,United Kingdom,Woman,0,Bisexual,White,A few times per month,Rarely,Sometimes,3.71,4.75,4.48,4.43,4,4.88
+79,26,United Kingdom,Woman,0,Bisexual,Black or African-American,A few times per week,Often,Often,3.71,1.75,4.33,3.14,4.83,5
+80,27,United Kingdom,Woman,0,Bisexual,White,A few times per month,Never,Never,2.86,1.75,1.09,1,1.33,1
+81,27,United Kingdom,Woman,0,Bisexual,White,A few times per month,Rarely,Never,2.86,4.75,1.05,1,1,1.12
+82,27,United Kingdom,"Nonbinary, genderfluid, two-spirit, or gender non-conforming",0,Gay or Lesbian,White,A few times per week,Always,Often,5.29,4.75,5.86,5.71,6,5.88
+83,27,United Kingdom,"Nonbinary, genderfluid, two-spirit, or gender non-conforming",1,Bisexual,White,A few times per month,Sometimes,Rarely,2.71,2,4.86,4.29,5.17,5.12
+84,27,United Kingdom,Man,0,Asexual,Not specified,A few times per week,Sometimes,Rarely,3.14,4.25,4.95,5.14,4.67,5
+85,28,United Kingdom,Woman,0,Queer,White,A few times per month,Often,Never,4,4.5,4.81,4.71,5.5,4.38
+86,28,United Kingdom,Woman,0,Asexual,White,A few times per week,Rarely,Never,3,3.5,3.1,2.14,3.17,3.88
+87,29,United Kingdom,Woman,0,Asexual,White,A few times per week,Sometimes,Often,3.71,4.75,5.14,5.14,5.5,4.88
+89,29,United Kingdom,Woman,0,Gay or Lesbian,Black or African-American,A few times per week,Often,Often,3.29,4.25,5.24,4,6,5.75
+90,29,United Kingdom,Woman,0,Gay or Lesbian,White,A few times per week,Sometimes,Sometimes,4,4.5,3.81,3.57,4.67,3.38
+91,30,United Kingdom,Woman,0,Gay or Lesbian,White,A few times per week,Often,Sometimes,4.29,4,4.66,4.71,5.33,4.12
+92,31,United Kingdom,Woman,0,Pansexual,White,A few times per month,Sometimes,Never,4.29,4,3.67,3.29,4.17,3.62
+93,32,United Kingdom,Man,0,Bisexual,White,A few times per year,Never,Never,2.86,3.5,2.1,2,2,2.25
+94,32,United Kingdom,Woman,0,Bisexual,White,A few times per week,Sometimes,Rarely,4.29,4.25,3.71,4,3.33,3.75
+95,33,United Kingdom,Woman,0,Pansexual,White,A few times per week,Rarely,Often,3.43,4.75,3.48,3.71,4.17,2.75
+96,33,United Kingdom,Woman,0,Bisexual,White,Daily,Sometimes,Rarely,4.14,4.5,4.48,4.43,4.67,4.38
+97,33,United Kingdom,Woman,0,Bisexual,White,A few times per month,Often,Rarely,4,4,2.81,2.29,4,2.38
+98,34,United Kingdom,Woman,0,Pansexual,White,A few times per month,Sometimes,Never,4.57,4,3.57,3.43,4,3.38
+99,34,United Kingdom,Woman,0,Pansexual,White,Daily,Always,Often,4.57,4.75,5,5,5.17,4.88
+100,34,United Kingdom,Man,0,Bisexual,Asian,A few times per month,Rarely,Rarely,4.14,4,5.24,4.86,5.5,5.38
+101,35,United Kingdom,Woman,0,Pansexual,White,A few times per month,Often,Rarely,4.57,5,5.57,6,6,4.88
+102,35,United Kingdom,Woman,0,Bisexual,White,A few times per week,Sometimes,Sometimes,3.71,4,4.43,4.14,4.83,4.38
+103,35,United Kingdom,Woman,1,Bisexual,"Black or African-American,White",A few times per month,Rarely,Sometimes,4.14,5,4.9,4.86,4.83,5
+104,36,United Kingdom,Woman,0,Bisexual,White,A few times per month,Sometimes,Rarely,4.43,3.5,4.38,4,4.83,4.38
+105,37,United Kingdom,Woman,0,Gay or Lesbian,White,A few times per week,Often,Rarely,4.29,4.5,4.53,4.86,4.17,4.5
+106,37,United Kingdom,"Nonbinary, genderfluid, two-spirit, or gender non-conforming",1,Bisexual,White,A few times per week,Sometimes,Never,2.71,4.5,3.71,4.14,4.33,2.88
+107,38,United Kingdom,Woman,0,Gay or Lesbian,White,A few times per year,Sometimes,Rarely,3.71,3.75,3.9,4,4.17,3.62
+108,42,United Kingdom,Woman,0,Bisexual,White,A few times per month,Often,Often,4,3.25,3.76,3.86,3.5,3.88
+109,42,United Kingdom,Man,0,Bisexual,White,A few times per week,Never,Rarely,4.57,5,3.43,2.86,3.33,4
+110,43,United Kingdom,Woman,0,Bisexual,White,A few times per month,Sometimes,Sometimes,4,4,3.9,4,4,3.75
+111,50,United Kingdom,Woman,0,Bisexual,White,A few times per month,Sometimes,Sometimes,2.86,2.5,3.62,3.57,3.67,3.62
+113,57,United Kingdom,Woman,0,Pansexual,White,A few times per week,Often,Rarely,4.29,4.25,4.38,4.14,4.5,4.5
+114,20,"United States, AL","Nonbinary, genderfluid, two-spirit, or gender non-conforming",1,Bisexual,White,A few times per week,Always,Sometimes,5,4.75,5.95,6,6,5.88
+115,29,"United States, AZ",Man,0,Bisexual,Not specified,A few times per week,Rarely,Never,3.71,5,5,5,5,5
+116,24,"United States, AR",Man,1,Gay or Lesbian,Black or African-American,Daily,Sometimes,Sometimes,4.29,5,4.38,4.71,4.33,4.12
+117,26,"United States, AR",Man,1,Bisexual,Black or African-American,A few times per week,Often,Rarely,4.43,4.75,4.38,4.57,4.17,4.38
+118,36,"United States, AR",Man,0,Bisexual,White,A few times per year,Rarely,Never,3.57,4.75,4.05,3.86,4.33,4
+119,19,"United States, CA",Woman,0,Questioning between Asexual or bisexual,Asian,A few times per year,Sometimes,Sometimes,3.86,3.75,4.24,4.43,4.17,4.12
+120,20,"United States, CA",Woman,1,Bisexual,Black or African-American,A few times per month,Sometimes,Often,3.71,2.75,4.57,4.86,5.33,3.75
+121,26,"United States, CA",Woman,1,Gay or Lesbian,White,A few times per week,Often,Rarely,4.14,5,4.81,5.43,4.83,4.25
+122,27,"United States, CA",Woman,0,Bisexual,"Black or African-American,White",A few times per year,Never,Never,2.14,1.5,1.95,1.57,2.33,2
+123,31,"United States, CA","Nonbinary, genderfluid, two-spirit, or gender non-conforming",0,Asexual,"Asian,White",A few times per year,Sometimes,Often,3.29,3.25,5.05,4.86,5.67,4.75
+124,34,"United States, CA",Woman,0,Pansexual,White,A few times per week,Sometimes,Sometimes,4.29,5,4.71,4.57,5.33,4.38
+125,45,"United States, CA",Man,0,Pansexual,Black or African-American,A few times per month,Never,Never,3.71,5,3.72,3.57,3.67,3.88
+126,27,"United States, CO",Woman,0,Gay or Lesbian,American Indian or Alaska Native,A few times per year,Often,Sometimes,4.43,4.75,5.05,5.14,4.5,5.38
+127,39,"United States, CO",Man,0,Bisexual,Asian,A few times per month,Rarely,Rarely,4.57,4.75,4.67,4.43,5,4.62
+128,59,"United States, FL",Man,0,Gay or Lesbian,White,Daily,Often,Rarely,4.14,4,5.95,5.86,6,6
+129,26,"United States, HI",Woman,0,Bisexual,Asian,A few times per month,Sometimes,Sometimes,4.29,4.5,4.38,4.43,4.33,4.38
+130,32,"United States, ID",agender,0,Asexual,White,A few times per week,Always,Sometimes,4.43,3,6,6,6,6
+131,24,"United States, IL","Nonbinary, genderfluid, two-spirit, or gender non-conforming",1,Bisexual,White,A few times per week,Sometimes,Rarely,4,4.25,4.72,5.29,4,4.75
+132,31,"United States, IL",Woman,0,Gay or Lesbian,White,A few times per year,Sometimes,Sometimes,4,3.5,4.48,4,5,4.5
+133,34,"United States, IL",Woman,0,Bisexual,White,A few times per week,Often,Sometimes,3.86,3.75,4.24,3.43,4.33,4.88
+134,35,"United States, IN","Nonbinary, genderfluid, two-spirit, or gender non-conforming",1,Bisexual,White,A few times per week,Often,Sometimes,3.43,4.25,5.09,4.71,6,4.75
+135,28,"United States, LA",Woman,0,Bisexual,White,A few times per week,Often,Never,4,3.75,3.66,3.14,4.33,3.62
+136,33,"United States, ME",Woman,0,Pansexual,"American Indian or Alaska Native,White",Never,Never,Never,3.57,1,1,1,1,1
+137,22,"United States, MA",Man,1,Bisexual,White,A few times per week,Rarely,Sometimes,3,3.75,1.19,1,1.5,1.12
+138,26,"United States, MA",Woman,0,Asexual,Asian,A few times per year,Rarely,Rarely,3.71,3,5.1,5.29,4,5.75
+139,27,"United States, MA","Nonbinary, genderfluid, two-spirit, or gender non-conforming",0,Gay or Lesbian,"American Indian or Alaska Native,White",A few times per month,Never,Never,1.57,1.75,1.19,1,1,1.5
+140,27,"United States, MI",Woman,0,Bisexual,White,A few times per year,Never,Sometimes,2.43,2.25,2,2,2,2
+141,19,"United States, MS","Nonbinary, genderfluid, two-spirit, or gender non-conforming",1,Gay or Lesbian,Black or African-American,A few times per week,Often,Always,4.57,5.5,5.48,6,5.5,5
+142,27,"United States, MO",Man,0,Bisexual,White,A few times per year,Never,Never,4.57,5,1.71,1,3.5,1
+143,43,"United States, NV",Woman,0,Asexual,White,A few times per month,Rarely,Sometimes,3.43,2.5,1.66,2,2,1.12
+144,45,"United States, NV",Woman,0,Bisexual,"American Indian or Alaska Native,Black or African-American",A few times per year,Never,Never,4.43,4.5,1.57,1.71,2.17,1
+145,24,"United States, NJ",Man,1,Bisexual,White,A few times per month,Sometimes,Rarely,5.14,4.5,4.24,4.86,4.67,3.38
+146,33,"United States, NM",Woman,0,Asexual,Black or African-American,A few times per week,Sometimes,Rarely,4,5,4.53,4.29,4.5,4.75
+147,21,"United States, NY",Woman,0,Bisexual,White,A few times per week,Sometimes,Always,3,1.5,3.24,2.71,4.33,2.88
+148,22,"United States, NY",Man,0,Bisexual,Black or African-American,A few times per week,Sometimes,Sometimes,4.71,5,5.09,5.14,5,5.12
+150,25,"United States, NY",Woman,0,Gay or Lesbian,White,A few times per week,Often,Sometimes,3.71,2.25,5.43,4.86,6,5.5
+151,28,"United States, NY",Man,0,Bisexual,Black or African-American,A few times per month,Often,Sometimes,4.14,5.25,4.96,4.86,5.17,4.88
+152,29,"United States, NY",Woman,0,Bisexual,White,A few times per week,Often,Often,3.86,4.25,5.43,6,5.5,4.88
+153,35,"United States, NY",Woman,0,Bisexual,White,A few times per month,Rarely,Never,4.29,5,3.81,4.29,3.83,3.38
+154,26,"United States, NC",Woman,1,Bisexual,White,A few times per week,Often,Often,4.71,4,4.14,4,4,4.38
+155,30,"United States, NC","Nonbinary, genderfluid, two-spirit, or gender non-conforming",1,Queer,White,A few times per month,Often,Sometimes,3.14,3.5,4.57,4.14,4.17,5.25
+156,32,"United States, NC",Woman,0,Pansexual,Black or African-American,A few times per week,Often,Rarely,4.29,3.25,4.52,4.57,5,4.12
+157,35,"United States, NC",Woman,0,Bisexual,White,A few times per month,Sometimes,Rarely,4,4.25,4.1,4.29,4.33,3.75
+158,46,"United States, NC",Woman,0,Gay or Lesbian,White,A few times per week,Always,Sometimes,4.14,3.75,4.29,3.29,5,4.62
+159,29,"United States, OH",Man,0,Bisexual,White,Daily,Sometimes,Rarely,4.14,5,4,4,4,4
+160,35,"United States, OH",Woman,0,Pansexual,White,A few times per week,Sometimes,Sometimes,4.43,4,4.29,3.86,4.83,4.25
+161,26,"United States, OR",Woman,0,Gay or Lesbian,White,A few times per month,Often,Sometimes,4.43,4.5,5.71,5.71,5.83,5.62
+162,42,"United States, OR",Man,0,Pansexual,White,A few times per week,Sometimes,Rarely,4,4.25,4.62,4.29,5,4.62
+163,22,"United States, PA",Woman,0,Bisexual,White,A few times per week,Sometimes,Rarely,3.43,3,3.1,3.29,3,3
+164,35,"United States, PA",Woman,0,Bisexual,White,A few times per week,Often,Rarely,4.14,4.25,4.43,4.43,4.83,4.12
+165,40,"United States, PA",Woman,0,Pansexual,White,A few times per month,Sometimes,Rarely,3.14,4.5,4.14,4.14,4.17,4.12
+166,43,"United States, PA",Woman,0,Asexual,"Black or African-American,White",A few times per week,Rarely,Sometimes,5.29,4.25,3.48,3.29,4.33,3
+167,58,"United States, PA",Man,0,Bisexual,White,A few times per month,Rarely,Never,3,3.5,2.14,1.86,2.83,1.88
+168,39,"United States, TX",Woman,0,Pansexual,White,Daily,Never,Never,5,5,5,5,5,5
+169,40,"United States, TX",Man,0,Asexual,Black or African-American,A few times per week,Sometimes,Sometimes,1.43,6,1,1,1,1
+170,46,"United States, TX",Woman,0,Bisexual,White,A few times per month,Rarely,Sometimes,4.29,4.5,4.1,4.29,4.67,3.5
+171,41,"United States, VA",Woman,0,Bisexual,Black or African-American,A few times per week,Sometimes,Sometimes,3,4.5,4.76,4.57,5,4.75
+172,27,"United States, WA","Nonbinary, genderfluid, two-spirit, or gender non-conforming",1,Asexual,White,A few times per month,Sometimes,Rarely,3.86,3,4.23,4.71,3.83,4.12
+173,39,"United States, WI",Woman,0,Bisexual,Black or African-American,A few times per month,Sometimes,Sometimes,4.43,4.25,4.14,4.14,4.5,3.88
+174,44,"United States, WI",Woman,0,Bisexual,White,A few times per month,Sometimes,Rarely,3.71,5,3.53,3.14,4.17,3.38
