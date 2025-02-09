@@ -1,4 +1,4 @@
-### Data Analysis
+### Data Analysis & Visualization
 
 
 ## Install and library packages
@@ -20,6 +20,8 @@ if(!require(gridExtra)){install.packages("gridExtra")}
 library(gridExtra)
 if(!require(plotly)){install.packages("plotly")}
 library(plotly)
+if(!require(wordcloud2)){install.packages("wordcloud2")}
+library("wordcloud2")
 if(!require(psych)){install.packages("psych")}
 library("psych")
 if(!require(shiny)){install.packages("shiny")}
@@ -1028,4 +1030,107 @@ inter.psych.race <- ggplot(queer.hypo, aes(x = intersectionality_rating, y = psy
   theme.clean() 
 
 print(inter.psych.race)
+
+
+
+
+
+# Generate Word Clouds for Queer media genre and show names
+
+# Prepare data for overall wordcloud
+overall_word_freq <- media.long %>%
+  count(media_name) %>%
+  arrange(desc(n))
+
+# Define UI
+ui <- fluidPage(
+  titlePanel("Interactive Word Cloud for Media Genres"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("genre_select", "Select Genre:",
+                  choices = c("Overall", unique(media.long$media_genre))),
+      sliderInput("num_words", "Number of Words:", min = 10, max = 200, value = 100),
+      selectInput("color_palette", "Color Palette:",
+                  choices = c("Vibrant" = "viridis", 
+                              "Rainbow" = "rainbow",
+                              "Pastel" = "Set2",
+                              "Earthy" = "YlOrBr")),
+      selectInput("shape", "Cloud Shape:",
+                  choices = c("Circle", "Cardioid", "Diamond", "Triangle-forward", "Triangle", "Pentagon", "Star"))
+    ),
+    
+    mainPanel(
+      wordcloud2Output("wordcloud", width = "100%", height = "600px"),
+      textOutput("error_message"))))
+
+# Define server logic
+server <- function(input, output, session) {
+  
+  wordcloud_data <- reactive({
+    req(input$genre_select)
+    
+    if (input$genre_select == "Overall") {
+      df <- overall_word_freq
+    } else {
+      df <- media.long %>% 
+        filter(media_genre == input$genre_select) %>%
+        count(media_name) %>%
+        arrange(desc(n))
+    }
+    output$debug_info <- renderPrint({
+      cat("Selected Genre:", input$genre_select, "\n")
+      cat("Number of rows:", nrow(df), "\n")
+      print(head(df))
+    })
+    if (nrow(df) == 0) {
+      return(NULL)
+    }
+    # Ensure we have at least 2 words and limit to the number of words selected
+    df <- df %>% 
+      head(max(2, input$num_words)) %>%
+      mutate(n = sqrt(n)) 
+    df
+  })
+
+  # Color palette function
+  get_colors <- reactive({
+    req(input$num_words)
+    if (input$color_palette == "viridis") {
+      colorRampPalette(viridis::viridis(10))(input$num_words)
+    } else if (input$color_palette == "rainbow") {
+      rainbow(input$num_words)
+    } else {
+      colorRampPalette(brewer.pal(8, input$color_palette))(input$num_words)
+    }
+  })
+  
+  # Render wordcloud
+  output$wordcloud <- renderWordcloud2({
+    req(wordcloud_data())
+    tryCatch({
+      wordcloud2(data = wordcloud_data(), 
+                 size = 0.5,  # Reduced size to fit more words
+                 color = get_colors(),
+                 backgroundColor = "white",
+                 shape = tolower(input$shape),
+                 rotateRatio = 0.3,
+                 minRotation = -pi/4,
+                 maxRotation = pi/4,
+                 minSize = 5)  # Set a minimum size for words
+    }, error = function(e) {
+      output$error_message <- renderText({
+        paste("Error generating wordcloud:", e$message)
+      })
+      return(NULL)
+    })
+  })
+  
+  observe({
+    req(wordcloud_data())
+    output$error_message <- renderText({ "" })
+  })
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)
 
