@@ -1,7 +1,7 @@
 # Exploring the Impact of Queer Media Characters on LGBTQ+ Psychological Well-Being: The Role of Queer Media Consumption, Perceived Authenticity, and Intersectionality
 
 
-:rainbow:## Repository Purpose
+## :rainbow: Repository Purpose
 This repository contains the manuscript, data, images, and code for the final research project titled "Exploring the Impact of Queer Media Characters on LGBTQ+ Psychological Well-Being: The Role of Queer Media Consumption, Perceived Authenticity, and Intersectionality" in the course From Data to Manuscript in R. The study examined queer media characters’ impacts on LGBTQ+ individuals’ psychological well-being through two overarching research questions. The first research question investigated whether there were differences in queer characters’ psychological impacts among LGBTQ+ individuals with different identities. The second research question asked whether queer media consumption patterns, perceived character authenticity, and perceived character intersectionality contribute to different LGBTQ+ identities’ impacts on queer media characters’ psychological impacts. 
 
 
