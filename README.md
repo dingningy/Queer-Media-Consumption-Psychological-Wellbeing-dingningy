@@ -63,18 +63,18 @@ Data cleaning, transformation, analysis, and visualization were performed by RSt
 ### Dataset Names
 
 **Raw dataset:**
-[View the Dataset](./Data/raw.queer.label.csv);
-[View the Dataset](./Data/raw.queer.value.csv)
+raw.queer.label.csv:[View the Dataset](./Data/raw.queer.label.csv);
+raw.queer.value.csv:[View the Dataset](./Data/raw.queer.value.csv)
 
 **Cleaned dataset:**
-[View the Dataset](./Data/queer.cleaned.csv)
+queer.cleaned.csv:[View the Dataset](./Data/queer.cleaned.csv)
 
 **Transformed dataset:**
-[View the Dataset](./Data/queer.hypo.csv);
-[View the Dataset](./Data/media.long.csv)
+queer.hypo.csv:[View the Dataset](./Data/queer.hypo.csv);
+media.long.csv:[View the Dataset](./Data/media.long.csv)
 
 
-### Source
+### Data Source
 The datasets are collected from the Qualtrics online survey on the Prolific platform in February 2025.
 
 
