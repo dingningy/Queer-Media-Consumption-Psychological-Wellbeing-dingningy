@@ -18,7 +18,7 @@ This repository contains the manuscript, data, images, and code for the final re
    - [Data](./Data/): Directory containing two original, unprocessed survey datasets, one cleaned dataset, and two transformed datasets for data analysis. 
   
 4. **Visualizations**:
-   - [images](./images): Directory containing all 25 data visualizations and figures used in the manuscript.
+   - [Image](./Image): Directory containing all 25 data visualizations and figures used in the manuscript.
 
 5. **Documentation**:
    - [README.md](./README.md): Overview of the project, repository structure, and instructions for replication.
