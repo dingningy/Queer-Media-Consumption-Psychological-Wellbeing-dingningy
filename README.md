@@ -1,4 +1,6 @@
-# The Effects of Chatbot Gender on Consumer Buying Intention for Products: Human-AI Interactions in the E-Commerce Context
+# Exploring the Impact of Queer Media Characters on LGBTQ+ Psychological Well-Being: The Role of Queer Media Consumption, Perceived Authenticity, and Intersectionality
+
+##Repo Purpose##
 
 Final Research Project for Data to Manuscript in R
 
