@@ -39,19 +39,19 @@ This study recruited 180 LGBTQ+ participants worldwide through the data collecti
 ### Measurements
 This study developed a survey instrument to explore queer media characters’ psychological impacts among different LGBTQ+ individuals with five sections: 
 
-**Demographic form**
+**Demographic form:**
 The demographic form includes nine questions that ask participants’ age, residential country (and state if living in the US), gender identity, sexual orientation, race, and education. 
 
-**Queer media consumption**
+**Queer media consumption:**
 The queer media consumption scale asks five questions regarding participants’ exposure and engagement with queer media characters. Specifically, the scale measures the frequency of watching queer TV shows or movies, the specific queer media genre and names (as a mix of close-ended and open-ended questions), the discussion engagement of queer representations on social media, and the importance of queer media consumption. 
 
-**Queer character authenticity**
+**Queer character authenticity:**
 The queer character authenticity scale consists of seven questions, with four of them asking the extent to which queer characters can reflect individual experiences and daily encounters. Another three questions measure the extent of queer characters displaying stereotypes, which are reverse-coded. The sum of seven questions consists of the authenticity rating of the whole scale. 
 
-**Queer character intersectionality**
+**Queer character intersectionality:**
 The queer character intersectionality scale consists of four questions that ask the extent to which queer characters can reflect diverse experiences of multiple factors such as racial and socioeconomic backgrounds. 
 
-**Queer character’s psychological impacts**
+**Queer character’s psychological impacts:**
 This scale measures queer characters’ impacts on participants’ psychological well-being, which is constituted of three sub-scales: Self-development (seven questions), community belonging (six questions), and emotional well-being (eight questions). 
 
 ### Data Analysis
@@ -62,14 +62,14 @@ Data cleaning, transformation, analysis, and visualization were performed by RSt
 
 ### Dataset Names
 
-**Raw dataset**
+**Raw dataset:**
 raw.queer.label.csv 
 raw.queer.value.csv
 
-**Cleaned dataset**
+**Cleaned dataset:**
 queer.cleaned.csv
 
-**Transformed dataset**
+**Transformed dataset:**
 queer.hypo.csv
 media.long.csv
 
