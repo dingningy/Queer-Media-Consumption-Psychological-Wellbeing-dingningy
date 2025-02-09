@@ -10,7 +10,7 @@ This repository contains the manuscript, data, images, and code for the final re
    - [Manuscript.qmd](./Manuscript.qmd): Quarto document containing the full research paper.
 
 2. **Source Code**:
-   - [Data Cleaning.R](./Data%20Cleaning.R): Script for cleaning and preprocessing raw data.
+   - [Data Cleaning.R](./Source/Data%20Cleaning.R): Script for cleaning and preprocessing raw data.
    - `Data Transformation.R`: Script for transforming cleaned data for analysis.
    - `Data Analysis.R`: Script containing statistical analyses, exploratory analysis, hypothesis testing, and data visualization. 
 
