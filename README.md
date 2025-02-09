@@ -54,7 +54,7 @@ The queer character intersectionality scale consists of four questions that ask 
 **Queer character’s psychological impacts:**
 This scale measures queer characters’ impacts on participants’ psychological well-being, which is constituted of three sub-scales: Self-development (seven questions), community belonging (six questions), and emotional well-being (eight questions). 
 
-### Data Analysis
+### :chart_with_upwards_trend: Data Analysis
 Data cleaning, transformation, analysis, and visualization were performed by RStudio.
 
 
