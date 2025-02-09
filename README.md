@@ -63,14 +63,14 @@ Data cleaning, transformation, analysis, and visualization were performed by RSt
 ### Dataset Names
 
 **Raw dataset:**
-raw.queer.label.csv 
+raw.queer.label.csv;
 raw.queer.value.csv
 
 **Cleaned dataset:**
 queer.cleaned.csv
 
 **Transformed dataset:**
-queer.hypo.csv
+queer.hypo.csv;
 media.long.csv
 
 
