@@ -11,8 +11,8 @@ This repository contains the manuscript, data, images, and code for the final re
 
 2. **Source Code**:
    - [Data Cleaning.R](./Source/Data%20Cleaning.R): Script for cleaning and preprocessing raw data.
-   - `Data Transformation.R`: Script for transforming cleaned data for analysis.
-   - `Data Analysis.R`: Script containing statistical analyses, exploratory analysis, hypothesis testing, and data visualization. 
+   - [Data Transformation.R](./Source/Data%20Transformation.R): Script for transforming cleaned data for analysis.
+   - [Data Analysis.R](./Source/Data%20Analysis.R): Script containing statistical analyses, exploratory analysis, hypothesis testing, and data visualization. 
 
 3. **Datasets**:
    - `/Data`: Directory containing two original, unprocessed survey datasets, one cleaned dataset, and two transformed datasets for data analysis. 
