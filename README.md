@@ -7,7 +7,7 @@ This repository contains the manuscript, data, images, and code for the final re
 
 ### Repository Contents
 1. **Manuscript**: 
-   - `Manuscript.qmd`: Quarto document containing the full research paper.
+   - [Manuscript.qmd](./Manuscript.qmd): Quarto document containing the full research paper.
 
 2. **Source Code**:
    - `Data Cleaning.R`: Script for cleaning and preprocessing raw data.
@@ -75,7 +75,7 @@ media.long.csv:[View the Dataset](./Data/media.long.csv)
 
 
 ### Data Source
-The datasets are collected from the Qualtrics online survey on the Prolific platform in February 2025.
+The data were collected from the Qualtrics online survey on the Prolific platform in February 2025.
 
 
 ### Size
