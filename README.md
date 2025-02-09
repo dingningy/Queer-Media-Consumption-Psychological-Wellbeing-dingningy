@@ -82,8 +82,5 @@ The data were collected from the Qualtrics online survey on the Prolific platfor
 Approximately 313 KB.
 
 
-### Access Instructions
-The dataset can be found in the `Data/` folder of the repository.
-
 ### Licensing
 This dataset is for internal use only and should not be shared without permission.
