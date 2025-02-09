@@ -1,6 +1,6 @@
 # Exploring the Impact of Queer Media Characters on LGBTQ+ Psychological Well-Being: The Role of Queer Media Consumption, Perceived Authenticity, and Intersectionality
 
-##Repo Purpose##
+##Repo Purpose
 
 Final Research Project for Data to Manuscript in R
 
