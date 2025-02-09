@@ -15,17 +15,17 @@ This repository contains the manuscript, data, images, and code for the final re
    - [Data Analysis.R](./Source/Data%20Analysis.R): Script containing statistical analyses, exploratory analysis, hypothesis testing, and data visualization. 
 
 3. **Datasets**:
-   - `/Data`: Directory containing two original, unprocessed survey datasets, one cleaned dataset, and two transformed datasets for data analysis. 
+   - [Data](./Data/): Directory containing two original, unprocessed survey datasets, one cleaned dataset, and two transformed datasets for data analysis. 
   
 4. **Visualizations**:
-   - `/images`: Directory containing all 25 data visualizations and figures used in the manuscript.
+   - [images](./images): Directory containing all 25 data visualizations and figures used in the manuscript.
 
 5. **Documentation**:
-   - `README.md`: Overview of the project, repository structure, and instructions for replication.
-   - `References.bib`: Bibliography file containing all cited works.
+   - [README.md](./README.md): Overview of the project, repository structure, and instructions for replication.
+   - [References.bib](./References.bib): Bibliography file containing all cited works.
 
 6. **Version Control**:
-   - `.gitignore`: Specifies intentionally untracked files to ignore.
+   - [.gitignore](./.gitignore): Specifies intentionally untracked files to ignore.
 
 This repository aims to ensure transparency, reproducibility, and accessibility of our research. It provides a comprehensive collection of all materials used in the study, from raw data to the final manuscript, allowing for thorough peer review and potential replication of our findings.
 
