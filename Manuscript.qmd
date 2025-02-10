@@ -1,19 +1,19 @@
 ---
-title: "My Title"
-shorttitle: "Short Title in Running Header"
+title: "Exploring the Impact of Queer Media Characters on LGBTQ+ Psychological Well-Being: The Role of Queer Media Consumption, Perceived Authenticity, and Intersectionality"
+shorttitle: "Queer Media Characters and LGBTQ+ Well-Being"
 author:
-  - name: Jane Doe
+  - name: Dingning Yang
     corresponding: true
-    orcid: 0000-0000-0000-0001
-    email: janedoe@generic.edu
+    orcid: 0009-0008-5546-962X
+    email: dingningy@uchicago.edu
     affiliations:
-      - name: Generic University
-        department: Department of Scholarly Studies
-        address: 1234 Capital St.
-        city: New York
-        region: NY
+      - name: University of Chicago
+        department: Department of Social Sciences
+        address: 5105 South Harper Ave.
+        city: Chicago
+        region: IL
         country: USA
-        postal-code: 12084-1234
+        postal-code: 60615-4156
 author-note:
   status-changes: 
     affiliation-change: ~
@@ -26,14 +26,23 @@ author-note:
     financial-support: ~
     gratitude: ~
     authorship-agreements: ~
-abstract: "This document is a template."
-keywords: [keyword1, keyword2, keyword3]
-bibliography: bibliography.bib
+abstract: |
+
+  | The growing visibility of the LGBTQ+ community is accompanied by the flourishing of queer characters in media in the information era. While previous studies have explored the double-edged impact of queer media representation on LGBTQ+ individuals’ development, few have compared these effects across different LGBTQ+ subgroups. This study investigates queer media characters’ psychological impacts on LGBTQ+ individuals with different identities, examining the relationship between perceived character authenticity, intersectionality, and characters’ impacts on LGBTQ+ individuals’ psychological well-being using a reliable survey instrument in a worldwide sample. 
+  
+  | Findings revealed that marginal groups within the LGBTQ+ community, including those from developing countries, gender minorities, and racial minorities, reported higher scores about queer media characters’ positive impacts on psychological well-being compared to their mainstream counterparts. However, in terms of sexual orientation, mainstream groups (i.e., gay and lesbian respondents) showed higher scores. Importantly, the study found strong positive correlations between authenticity ratings, intersectionality ratings, and scores of queer characters’ positive impacts on psychological well-being. 
+   
+  | This study contributes to a more nuanced understanding of LGBTQ+ individuals' diverse needs and experiences with queer media representation, which has significant implications for media producers, mental health professionals, and LGBTQ+ advocacy groups in fostering more positive and inclusive media representations for the LGBTQ+ community.
+keywords: [LGBTQ+ well-being, queer media representations, intersectionality]
+bibliography: References.bib
 format:
-  apaquarto-docx: default
-  apaquarto-html: default
   apaquarto-pdf:
     documentmode: man
+    indent: true
+    include-in-header: 
+      text: |
+        \usepackage{setspace}
+        \linespread{2}
 ---
 
 # Method
