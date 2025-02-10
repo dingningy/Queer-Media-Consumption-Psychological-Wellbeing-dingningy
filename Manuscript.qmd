@@ -34,16 +34,23 @@ abstract: |
    
   | This study contributes to a more nuanced understanding of LGBTQ+ individuals' diverse needs and experiences with queer media representation, which has significant implications for media producers, mental health professionals, and LGBTQ+ advocacy groups in fostering more positive and inclusive media representations for the LGBTQ+ community.
 keywords: [LGBTQ+ well-being, queer media representations, intersectionality]
-bibliography: References.bib
 format:
   apaquarto-pdf:
+    csl: apa.csl
     documentmode: man
     indent: true
     include-in-header: 
       text: |
         \usepackage{setspace}
         \linespread{2}
+bibliography: References.bib
 ---
+Since the Stonewall riots, queer characters have flourished in the mass media, reaching their peak in the information era. As the primary audience for queer media characters, the LGBTQ+ community is claimed to be both positively and negatively impacted by these characters [e.g., @craig_media:_2015;@nolke_making_2018]. While queer characters can help LGBTQ+ individuals’ self-identity development and enhance their self-esteem, stereotypical representations that lack intersectionality may result in stigmatization and negative mental outcomes. Nevertheless, few studies have compared queer characters’ impacts on different sexual orientation or gender identity groups, probably because they ignored the emergence of more marginal groups (e.g., asexual). Additionally, no established instruments have explored how the differences in LGBTQ+ individuals’ queer media consumption, perceived character authenticity, or perceived intersectionality may contribute to different psychological well-being outcomes. Knowing different LGBTQ+ groups’ perceptions of queer media characters is essential to achieving internal equality within the LGBTQ+ community. Through developing a reliable and validated instrument on queer media characters’ psychological impacts and conducting worldwide data collection across different LGBTQ+ generations, this study aimed to contribute to a deeper understanding of queer characters’ psychological impacts on different LGBTQ+ groups, which can ultimately support the media industry to provide more diversified and inclusive queer representations. 
+
+
+
+
+
 
 # Method
 
