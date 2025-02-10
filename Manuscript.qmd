@@ -70,10 +70,27 @@ The current study examined queer media characters’ impacts on LGBTQ+ individua
 # Method
 
 ## Participants
+This study recruited 180 LGBTQ+ participants worldwide through the data collection platform Prolific. Specifically, the respondents were aged from 18 to 72 in 17 countries (including countries in North America, Europe, Asia, and Africa) with different sexual orientations, gender identities, and racial identities, satisfying the research needs for comparisons among LGBTQ+ individuals with different identities on queer media characters’ psychological impacts. Each participant was paid $2 to participate in a survey with a seven-minute average finish time. 
 
-## Measures
+## Measurements
 
-## Procedure
+This study developed a survey instrument on Qualtrics to explore queer media characters’ psychological impacts among different LGBTQ+ individuals with five sections: 
+
+* ***Demographic form***: The demographic form includes nine questions that ask participants’ age, residential country (and state if living in the US), gender identity, sexual orientation, racial identity, and education levels. 
+
+* ***Queer media consumption***: The queer media consumption scale asks five questions regarding participants’ exposure and engagement with queer media characters. Specifically, the scale measures the frequency of watching queer TV shows or movies, the discussion engagement of queer representations on social media, and the specific queer media genre and names as a mix of close-ended and open-ended questions.
+
+* ***Queer character authenticity***: The queer character authenticity scale consists of seven questions, with four of them asking the extent to which queer characters can reflect individual experiences in daily life. The other three questions measure the extent to which queer characters displaying stereotypes, which are reverse-coded. The sum of seven questions consists of the authenticity rating of the whole scale. 
+
+* ***Queer character intersectionality***: The queer character intersectionality scale consists of four questions that ask the extent to which queer characters can reflect diverse experiences of multiple factors such as racial and socioeconomic backgrounds. 
+
+* ***Queer character’s psychological impacts***: This scale measures queer characters’ impacts on participants’ psychological well-being, which is constituted of three sub-scales: 
+  + Self-development (seven questions)
+  + Community belonging (six questions)
+  + Emotional well-being (eight questions)
+        
+
+
 
 # Results
 
