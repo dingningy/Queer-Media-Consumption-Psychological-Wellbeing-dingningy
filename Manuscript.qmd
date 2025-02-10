@@ -43,14 +43,24 @@ format:
       text: |
         \usepackage{setspace}
         \linespread{2}
+        \renewcommand{\footnotesize}{\fontsize{8}{10}\selectfont}
 bibliography: References.bib
 ---
 Since the Stonewall riots, queer characters have flourished in the mass media, reaching their peak in the information era. As the primary audience for queer media characters, the LGBTQ+ community is claimed to be both positively and negatively impacted by these characters [e.g., @craig_media:_2015;@nolke_making_2018]. While queer characters can favorably impact LGBTQ+ individuals’ identity development and self-esteem, stereotypical representations that lack intersectionality may result in stigmatization and negative mental outcomes. Nevertheless, few studies have compared queer characters’ impacts on different LGBTQ+ subgroups, probably because they ignored the emergence of more marginal groups (e.g., asexual). Additionally, no established instruments have explored how perceived character authenticity or intersectionality may contribute to different psychological well-being outcomes. Knowing LGBTQ+ individuals' diverse needs and experiences with queer media representation is important as it can call for more diverse and inclusive queer media representations. Through developing a reliable instrument on queer media characters’ psychological impacts and conducting worldwide data collection across different LGBTQ+ generations, this study aimed to contribute to a deeper understanding of queer characters’ psychological impacts on different LGBTQ+ groups. 
 
 # Literature Review
 
-## 
+## LGBTQ+ Community and Queer Media Characters
 
+@IpsosLimited2024 has found that 17% of Generation Zers^[Generation Z (born between 1996-2012), Millennials (born between 1980-1995), Generation X (born between 1966-1979) and Baby Boomers (born between 1945-1965).] identified as part of the LGBTQ+ community, including identities such as lesbian, gay, bisexual, transgender, queer, asexual, and non-binary. This indicates a significant increase compared with prior generations, with only 11% for Millennials, 6% for Generation Xers, and 5% for Baby Boomers. The evolution within the LGBTQ+ community is accompanied by the flourishing of queer characters in TV shows and films that cater to their needs for identity affirmation and psychological belonging. For instance, the past ten years have witnessed a more than 300% increase in the number of LGBTQ+ characters on broadcast [@GLAAD2024]. Compared with earlier queer characters that often feature heavy stereotypes (e.g., Frank-N-Furter in *Rocky Horror*), queer characters nowadays feature more multidimensional personalities and diversity, indicating progress in the representation of queer lives in media.
+
+## Queer Media Characters’ Positive Impacts on the LGBTQ+ Community
+
+@toomey_coping_2018 indicated that LGBTQ+ individuals may rely on social and cultural resources to enhance identity affirmation and cope with stress. Prior studies found that queer media characters can positively affect LGBTQ+ individuals as an effective coping strategy. @gomillion_influence_2011 conducted surveys and interviews on lesbian, gay, and bisexual (LGB) youth from Texas, suggesting that queer media characters, as role models, could positively affect LGB youth’s self-identity by enhancing their self-esteem and courage. While @gomillion_influence_2011 ignored transgenders and genderqueers, @craig_media:_2015 showed that queer media characters could help LGBTQ youth improve their self-assurance and build relationships with people having shared identities. Nevertheless, prior studies convergently focused on queer characters’ impacts on LGBTQ+ youth in the United States, ignoring cross-generation and cross-country comparisons, which may result in low external validity of the findings. Additionally, these studies barely compared different sexual orientations and gender identities in the LGBTQ+ community, which may neglect more marginalized groups’ perceptions and experiences (e.g., asexual and pansexual). 
+
+## Queer Media Stereotypes’ Negative Impacts on the LGBTQ+ Community
+
+Some studies have also criticized that queer media characters presenting stereotypes could be harmful to the LGBTQ+ community. @yaksich_consuming_2005 and @guidotto_cashing_2006 indicated that many queer media representations are the commodification of the LGBTQ+ community. The queer media monopoly of ‘perfect homo’ (i.e., flamboyant Caucasian and middle-classed gay men) neglects intersectionality, reinforcing the LGBTQ+ stereotypes in the audience’s perceptions. @nolke_making_2018 identified the intersectional invisibility of queer media representations by applying intersectional analysis of a series of advertisements from 2009 to 2015. The discussion from this study also indicated that the hegemony of queer stereotypes and the lack of intersectionality could be harmful to the LGBTQ+ community by bringing them lower confidence and mental illnesses (e.g., depressive disorders). 
 
 # Method
 
@@ -74,6 +84,7 @@ Since the Stonewall riots, queer characters have flourished in the mass media, r
 
 ::: {#refs}
 :::
+
 
 # Appendix
 
