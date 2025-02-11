@@ -48,8 +48,9 @@ format:
 bibliography: References.bib
 ---
 
-```{r,include=FALSE}
+```{r}
 #| label: setup
+#| include: false
 # Install required packages
 if(!require(tidyverse)){install.packages("tidyverse")}
 if(!require(ggplot2)){install.packages("ggplot2")}
@@ -112,8 +113,9 @@ This study developed a survey instrument on Qualtrics to explore queer media cha
   
 ## Data Analysis
 
-```{r,include=FALSE}
+```{r}
 #| label: read in cleaned and transformed datasets
+#| include: false
 # Read in the cleaned and transformed dataset
 queer.cleaned <- read_csv("data/queer.cleaned.csv")
 queer.hypo <- read_csv("data/queer.hypo.csv")
@@ -123,8 +125,9 @@ media.long <- read_csv("data/media.long.csv")
 
 Data was preprocessed through RStudio and transformed into a tidy format for analysis.
 
-```{r,include=FALSE}
+```{r}
 #| label: Source data analysis script
+#| include: false
 source("Source/Data Analysis.R")
 
 ```
@@ -187,8 +190,9 @@ kable(reliability_kable,
 ```
 
 
-```{r, include=FALSE}
+```{r}
 #| label: Prepare for inline character display
+#| include: false
 
 sexual_orientation_inline<- c("asexual","bisexual","gay or lesbian","pansexual","and queer")
 
@@ -196,7 +200,7 @@ sexual_orientation_inline<- c("asexual","bisexual","gay or lesbian","pansexual",
 ```
  
 ### Respondent Characteristics
-167 respondents were eligible for the data analysis after data cleaning. Respondents ranged in age from `r min(queer.hypo$age)` to `r max(queer.hypo$age)` years old. The average age of the sample was `r round(mean(queer.hypo$age), 2)` years old (SD = `r round(sd_age, 2)`). This wide age range ensured the study captured perspectives from individuals across different generations. Respondents' residential countries included `r n_distinct (queer.hypo.country$country)` countries and four continents (see Fig 1), with both developed and developing country status, providing a global perspective. Regarding sexuality, the sample featured a diverse range of identities, with `r round(100 * sum(queer.hypo$gender_identity == "Man") / nrow(queer.hypo), 1)`% identifying as men, `r round(100 * sum(queer.hypo$gender_identity == "Woman") / nrow(queer.hypo), 1)`% as women, and 10.2% as non-binary, genderfluid, gender non-conforming, or agender. Among the sample, `r round(100 * sum(queer.hypo$transgender == "Yes") / nrow(queer.hypo), 1)`% was identified as transgender. The sexual orientation distribution of participants was also diverse, featuring `r sexual_orientation_inline` (see Fig 2). The racial distribution of the sample covered `r round(100 * sum(queer.hypo$race == "White") / nrow(queer.hypo), 1)`% white respondents, `r round(100 * sum(queer.hypo$race == "Black or African-American") / nrow(queer.hypo), 1)`% black or African-American respondents, and 15.5% Asian, Indian, or Alaska native. This rich diversity in age (generation), residential country, gender identity, sexual orientation, and racial identity enables meaningful comparisons and analyses across various LGBTQ+ subgroups and their intersecting identities.
+167 respondents were eligible for the data analysis after data cleaning. Respondents ranged in age from `r min(queer.hypo$age)` to `r max(queer.hypo$age)` years old. The average age of the sample was `r round(mean(queer.hypo$age), 2)` years old (*SD* = `r round(sd_age, 2)`). This wide age range ensured the study captured perspectives from individuals across different generations. Respondents' residential countries included `r n_distinct (queer.hypo.country$country)` countries and four continents (Figure 1), with both developed and developing country status, providing a global perspective. Regarding sexuality, the sample featured a diverse range of identities, with `r round(100 * sum(queer.hypo$gender_identity == "Man") / nrow(queer.hypo), 1)`% identifying as men, `r round(100 * sum(queer.hypo$gender_identity == "Woman") / nrow(queer.hypo), 1)`% as women, and 10.2% as non-binary, genderfluid, gender non-conforming, or agender. Among the sample, `r round(100 * sum(queer.hypo$transgender == "Yes") / nrow(queer.hypo), 1)`% was identified as transgender. The sexual orientation distribution of participants was also diverse, featuring `r sexual_orientation_inline` (Figure 2). The racial distribution of the sample covered `r round(100 * sum(queer.hypo$race == "White") / nrow(queer.hypo), 1)`% white respondents, `r round(100 * sum(queer.hypo$race == "Black or African-American") / nrow(queer.hypo), 1)`% black or African-American respondents, and 15.5% Asian, Indian, or Alaska native. This rich diversity in age (generation), residential country, gender identity, sexual orientation, and racial identity enables meaningful comparisons and analyses across various LGBTQ+ subgroups and their intersecting identities.
 
 
 
@@ -221,6 +225,188 @@ Residential Distribution
 # Results
 
 ## Queer Media Characters’ Psychological Impacts on Different LGBTQ+ Subgroups
+
+```{r}
+#| label: ANOVA tests for psychological well-being scores by different LGBTQ+ subgroups
+#| include: false
+
+# 1. Age
+anova_age_effect <- aov(psychological_wellbeing_score ~ generation, data = queer.hypo)
+summary(anova_age_effect)
+
+# p = .70, no significant difference has been found among different generations
+
+
+# 2. Residential Country Development Status
+anova_country_effect <- aov(psychological_wellbeing_score ~ development_status, data = queer.hypo)
+summary(anova_country_effect)
+summary_country_effect <- summary(anova_country_effect)[[1]]
+
+# p = .014, F = 6.16, significant difference has been found between developed and developing countries
+
+
+# 3. Gender identity
+anova_gender_identity_effect <- aov(psychological_wellbeing_score ~ gender_identity_dual, data = queer.hypo)
+summary (anova_gender_identity_effect)
+summary_gender_effect <- summary(anova_gender_identity_effect)[[1]]
+
+# p = .11, no significant difference has been found among different gender identity, but there was a directional effect
+
+
+# 4. Transgender status
+anova_transgender_effect <- aov(psychological_wellbeing_score ~ transgender, data = queer.hypo)
+summary (anova_transgender_effect)
+
+# p = .25, no significant difference has been found among different gender identity
+
+
+# 5. Sexual orientation
+anova_sexual_orientation_effect <- aov(psychological_wellbeing_score ~ sexual_orientation, data = queer.hypo)
+summary (anova_sexual_orientation_effect)
+summary_orientation_effect <- summary(anova_sexual_orientation_effect)[[1]]
+
+# p = 0.1, no significant differences have been found among different sexual orientation, but there was directional effect
+
+
+# 6. Race
+anova_race_effect <- aov(psychological_wellbeing_score ~ race_category, data = queer.hypo)
+summary(anova_race_effect)
+summary_race_effect <- summary(anova_race_effect)[[1]]
+
+# p = .09, marginally significant difference has been found between white and other
+
+```
+
+
+
+
+
+One-way ANOVA results showed that there were no significant differences or directional effects in queer media characters’ psychological impacts among different generations (*p* = .70) or between transgenders and non-transgenders (*p* = .25). However, significant differences were found between developed and developing countries' residents (Figure 3). Specifically, residents in developed countries showed lower psychological impacts scores by queer media characters than those in developing countries ($M_{\text{developed}} = `r round(mean(queer.hypo$psychological_wellbeing_score[queer.hypo$development_status == "Developed"]), 2)`$ vs. $M_{\text{developing}} = `r round(mean(queer.hypo$psychological_wellbeing_score[queer.hypo$development_status == "Developing"]), 2)`$; *F*(`r summary_country_effect$Df[1]`, `r summary_country_effect$Df[2]`) = `r round(summary_country_effect$"F value"[1], 2)`; *p* = `r sprintf("%.3f", summary_country_effect$"Pr(>F)"[1])`). 
+
+Though the ANOVA result did not show significant differences among different gender identities, there was a directional effect indicated by the violin plot (Figure 4). Specifically, men showed lower psychological impacts scores than women and other gender identities ($M_{\text{men}} = `r round(mean(queer.hypo$psychological_wellbeing_score[queer.hypo$gender_identity_dual == "Man"]), 2)`$ vs. $M_{\text{womenother}} = `r round(mean(queer.hypo$psychological_wellbeing_score[queer.hypo$gender_identity_dual == "Women, or nonbinary, or agender"]), 2)`$; *F*(`r summary_gender_effect$Df[1]`, `r summary_gender_effect$Df[2]`) = `r round(summary_gender_effect$"F value"[1], 2)`; *p* = `r sprintf("%.3f", summary_gender_effect$"Pr(>F)"[1])`). The distribution also indicated that men have more low scores than their women or nonbinary counterparts. Regarding sexual orientation, the ANOVA result did not show significant differences among different sexual orientations, but there was also a directional effect (Figure 5). Specifically, bisexual individuals showed the lowest psychological impacts scores among all sexual orientations, while gay or lesbian had the highest impacts scores (*F*(`r summary_orientation_effect$Df[1]`, `r summary_orientation_effect$Df[2]`) = `r round(summary_orientation_effect$"F value"[1], 2)`; *p* = `r sprintf("%.3f", summary_orientation_effect$"Pr(>F)"[1])`). 
+
+```{r}
+#| label: fig-plot-country-psych-impact
+#| fig-cap: Country Comparison of Queer Characters' Psychological Impacts
+#| fig-width: 9
+#| fig-height: 5
+
+# Define the theme
+theme.clean <- function(){
+  theme_bw()+
+    theme(axis.text.x = element_text(size = 12, vjust = 1, hjust = 1),
+          axis.text.y = element_text(size = 12),
+          axis.title.x = element_text(size = 14, face = "plain"),             
+          axis.title.y = element_text(size = 14, face = "plain"),
+          panel.grid.major.x = element_blank(),                                          
+          panel.grid.minor.x = element_blank(),
+          panel.grid.minor.y = element_blank(),
+          panel.grid.major.y = element_blank(),  
+          plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), units = , "cm"),
+          plot.title = element_text(size = 16, vjust = 1, hjust = 0.5),
+          plot.caption = element_text (size = 8,vjust = 1, hjust = 0.9),
+          legend.text = element_text(size = 12, face = "italic"),          
+          legend.position = "right")}
+
+# Visualization: Boxplot
+
+country_effect_boxplot <- ggplot(queer.hypo, aes(development_status, psychological_wellbeing_score)) + 
+  geom_boxplot(aes(fill = development_status)) +
+  theme_bw() +
+  scale_fill_manual(values = c("#dbf1e5", "#4fba7f")) +               
+  scale_colour_manual(values = c("#dbf1e5", "#4fba7f")) + 
+  labs(title = "Country Comparison of Queer Characters' Psychological Impacts", 
+       x = "Development Status", y = "Queer Characters' Psychological Impact Score") +
+  theme.clean()+
+  theme(axis.text.x = element_text(hjust = 0.5))+
+  scale_y_continuous(breaks = seq(floor(min(queer.hypo$psychological_wellbeing_score)), 
+                                  ceiling(max(queer.hypo$psychological_wellbeing_score)), by = 1)) +
+  stat_summary(fun = mean, geom = "point", color = "black", size = 3, shape = 18, 
+               position = position_dodge(0.75), aes(shape = "Mean"), 
+               show.legend = FALSE) +  
+  stat_summary(fun = mean, geom = "text", aes(label = round(after_stat(y), 2)), 
+               color = "black", vjust = -1, position = position_dodge(0.75), 
+               size = 4, show.legend = FALSE) +
+  labs(fill = "Development Status") 
+
+print (country_effect_boxplot)
+
+
+```
+
+```{r}
+#| label: fig-plot-gender-psych-impact
+#| fig-cap: Gender Identity Difference of Queer Characters' Psychological Impacts
+#| fig-width: 10
+#| fig-height: 5
+
+# Visualization: Violinplot
+
+gender_identity_effect_violinplot <- ggplot(queer.hypo, aes(gender_identity_dual, psychological_wellbeing_score)) + 
+  geom_violin(aes(fill = gender_identity_dual)) +
+  theme_bw() +
+  scale_fill_manual(values = c("#6fa8dc", "#d5a6bd")) +               
+  scale_colour_manual(values = c("#6fa8dc", "#d5a6bd")) + 
+  labs(title = "Gender Identity Difference of Queer Characters' Psychological Impacts", 
+       x = "Gender Identity", y = "Queer Characters' Psychological Impact Score") +
+  theme.clean()+
+  theme(axis.text.x = element_text(hjust = 0.5))+
+  scale_y_continuous(breaks = seq(floor(min(queer.hypo$psychological_wellbeing_score)), 
+                                  ceiling(max(queer.hypo$psychological_wellbeing_score)), by = 1)) +
+  stat_summary(fun = mean, geom = "point", color = "white", size = 3, shape = 18, 
+               position = position_dodge(0.75), aes(shape = "Mean"), 
+               show.legend = FALSE) +  
+  stat_summary(fun = mean, geom = "text", aes(label = round(after_stat(y), 2)), 
+               color = "white", vjust = -1, position = position_dodge(0.75), 
+               size = 4, show.legend = FALSE) +
+  labs(fill = "Gender Identity") 
+
+print (gender_identity_effect_violinplot)
+
+
+```
+
+
+![Sexual Orientation Comparison of Queer Characters' Psychological Impacts](Image/Fig 10_Orientation_Psych_box.png)
+
+Racial differences in queer media characters’ psychological impacts were marginally significant (Figure 6). Specifically, white respondents showed lower psychological impacts scores than other racial groups ($M_{\text{white}} = `r round(mean(queer.hypo$psychological_wellbeing_score[queer.hypo$race_category == "White"]), 2)`$ vs. $M_{\text{blackother}} = `r round(mean(queer.hypo$psychological_wellbeing_score[queer.hypo$race_category == "Black, Asian, Indian, and Others"]), 2)`$; *F*(`r summary_race_effect$Df[1]`, `r summary_race_effect$Df[2]`) = `r round(summary_race_effect$"F value"[1], 2)`; *p* = `r sprintf("%.3f", summary_race_effect$"Pr(>F)"[1])`). 
+
+
+
+```{r}
+#| label: fig-plot-race-psych-impact
+#| fig-cap: Race Comparison of Queer Characters' Psychological Impacts
+#| fig-width: 10
+#| fig-height: 5
+# Visualization: Violinplot
+race_effect_boxplot <- ggplot(queer.hypo, aes(race_category, psychological_wellbeing_score)) + 
+  geom_boxplot(aes(fill = race_category)) +
+  theme_bw() +
+  scale_fill_manual(values = c("#cfb5a0","#f1e2c8")) +               
+  scale_colour_manual(values = c("#cfb5a0","#f1e2c8")) + 
+  labs(title = "Race Comparison of Queer Characters' Psychological Impacts", 
+       x = "Racial Identity", y = "Queer Characters' Psychological Impact Score") +
+  theme.clean()+
+  theme(axis.text.x = element_text(hjust = 0.5))+
+  scale_y_continuous(breaks = seq(floor(min(queer.hypo$psychological_wellbeing_score)), 
+                                  ceiling(max(queer.hypo$psychological_wellbeing_score)), by = 1)) +
+  stat_summary(fun = mean, geom = "point", color = "white", size = 3, shape = 18, 
+               position = position_dodge(0.75), aes(shape = "Mean"), 
+               show.legend = FALSE) +  
+  stat_summary(fun = mean, geom = "text", aes(label = round(after_stat(y), 2)), 
+               color = "white", vjust = -1, position = position_dodge(0.75), 
+               size = 4, show.legend = FALSE) +
+  labs(fill = "Racial Identity") 
+
+print (race_effect_boxplot)
+
+
+
+```
+
+
+
+
 
 
 
