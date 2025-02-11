@@ -34,6 +34,7 @@ abstract: |
    
   | This study contributes to a more nuanced understanding of LGBTQ+ individuals' diverse needs and experiences with queer media representation, which has significant implications for media producers, mental health professionals, and LGBTQ+ advocacy groups in fostering more positive and inclusive media representations for the LGBTQ+ community.
 keywords: [LGBTQ+ well-being, queer media representations, intersectionality]
+floatsintext: true
 format:
   apaquarto-pdf:
     csl: apa.csl
@@ -46,6 +47,26 @@ format:
         \renewcommand{\footnotesize}{\fontsize{8}{10}\selectfont}
 bibliography: References.bib
 ---
+
+```{r,include=FALSE}
+#| label: setup
+# Install required packages
+if(!require(tidyverse)){install.packages("tidyverse")}
+if(!require(ggplot2)){install.packages("ggplot2")}
+if(!require(psych)){install.packages("psych")}
+if(!require(knitr)){install.packages("knitr")}
+if(!require(kableExtra)){install.packages("kableExtra")}
+
+# List of required packages
+required_packages <- c ("tidyverse", "ggplot2", "psych","knitr", "kableExtra")
+
+# Load required packages
+lapply(required_packages, library, character.only = TRUE)
+set.seed(123)
+
+```
+
+
 Since the Stonewall riots, queer characters have flourished in the mass media, reaching their peak in the information era. As the primary audience for queer media characters, the LGBTQ+ community is claimed to be both positively and negatively impacted by these characters [e.g., @craig_media:_2015;@nolke_making_2018]. While queer characters can favorably impact LGBTQ+ individuals’ identity development and self-esteem, stereotypical representations that lack intersectionality may result in stigmatization and negative mental outcomes. Nevertheless, few studies have compared queer characters’ impacts on different LGBTQ+ subgroups, probably because they ignored the emergence of more marginal groups (e.g., asexual). Additionally, no established instruments have explored how perceived character authenticity or intersectionality may contribute to different psychological well-being outcomes. Knowing LGBTQ+ individuals' diverse needs and experiences with queer media representation is important as it can call for more diverse and inclusive queer media representations. Through developing a reliable instrument on queer media characters’ psychological impacts and conducting worldwide data collection across different LGBTQ+ generations, this study aimed to contribute to a deeper understanding of queer characters’ psychological impacts on different LGBTQ+ groups. 
 
 # Literature Review
@@ -65,7 +86,7 @@ Nevertheless, no established instrument has systematically compared how LGBTQ+ p
 
 # Current Study and Hypotheses
 
-The current study examined queer media characters’ impacts on LGBTQ+ individuals’ psychological well-being through two overarching research questions. The first research question investigated whether there were differences in queer characters’ psychological impacts among LGBTQ+ individuals with different identities. Specifically, this study has compared LGBTQ+ individuals with different sexual orientations, gender identities, races, ages, and nationalities on queer characters’ psychological impacts. Given the fact that there were still queer stereotypes and fewer intersectional representations in mass media, the current study stated that queer media characters’ positive impacts on psychological well-being would be weaker for LGBTQ+ individuals with more invisible and marginalized identities (e.g., asexual, transgender, black, elder generations, developing countries’ residents) while being stronger for those with more visible identities (e.g., gay, cisgender, white, younger generations, developed countries’ residents). The second research question asked whether queer media consumption patterns, perceived character authenticity, and perceived character intersectionality can predict queer media characters’ psychological impacts. Specifically, this study hypothesized that lower ratings for perceived character authenticity and intersectionality would result in lower ratings for queer characters’ positive psychological impacts. Conversely, higher ratings for perceived character authenticity and intersectionality would result in higher ratings for queer characters’ positive psychological impacts. 
+The current study examined queer media characters’ impacts on LGBTQ+ individuals’ psychological well-being through two overarching research questions. The first research question investigated whether there were differences in queer characters’ psychological impacts among LGBTQ+ individuals with different identities. Specifically, this study has compared LGBTQ+ individuals with different sexual orientations, gender identities, races, ages, and residential countries on queer characters’ psychological impacts. Given the fact that there were still queer stereotypes and fewer intersectional representations in mass media, the current study stated that queer media characters’ positive impacts on psychological well-being would be weaker for LGBTQ+ individuals with more invisible and marginalized identities (e.g., asexual, transgender, black, elder generations, developing countries’ residents) while being stronger for those with more visible identities (e.g., gay, cisgender, white, younger generations, developed countries’ residents). The second research question asked whether queer media consumption patterns, perceived character authenticity, and perceived character intersectionality can predict queer media characters’ psychological impacts. Specifically, this study hypothesized that lower ratings for perceived character authenticity and intersectionality would result in lower ratings for queer characters’ positive psychological impacts. Conversely, higher ratings for perceived character authenticity and intersectionality would result in higher ratings for queer characters’ positive psychological impacts. 
 
 # Method
 
@@ -88,11 +109,127 @@ This study developed a survey instrument on Qualtrics to explore queer media cha
   + Self-development (seven questions)
   + Community belonging (six questions)
   + Emotional well-being (eight questions)
-        
+  
+## Data Analysis
+
+```{r,include=FALSE}
+#| label: read in cleaned and transformed datasets
+# Read in the cleaned and transformed dataset
+queer.cleaned <- read_csv("data/queer.cleaned.csv")
+queer.hypo <- read_csv("data/queer.hypo.csv")
+media.long <- read_csv("data/media.long.csv")
+
+```
+
+Data was preprocessed through RStudio and transformed into a tidy format for analysis.
+
+```{r,include=FALSE}
+#| label: Source data analysis script
+source("Source/Data Analysis.R")
+
+```
+
+### Reliability Tests
+Reliability analyses were conducted to assess the internal consistency of the measurement scales used in this study (see Table 1). Cronbach's alpha coefficients were calculated for each scale. Specifically, the authenticity rating measurement demonstrated satisfactory reliability (α = 0.76). The intersectionality rating measurement showed excellent reliability (α = 0.91). Both the media individual development scale and the media community belonging scale exhibited excellent reliability (α = 0.96 for both). The emotional well-being measurement also demonstrated excellent reliability (α = 0.96). Finally, the overall psychological well-being measurement showed the highest reliability with an excellent Cronbach's alpha of 0.98. These results indicate that all scales used in this study have good to excellent internal consistency, suggesting they are reliable measures of their respective constructs.
+
+
+```{r}
+#| label: Generate reliability test tables
+#| echo: false
+#| warning: false
+#| message: false
+#| tbl-cap: "Reliability Analysis Results"
+
+reliability_kable <- data.frame(
+  Scale = c("Authenticity rating", 
+            "Intersectionality rating", 
+            "Queer media individual development impact", 
+            "Queer media community belonging impact", 
+            "Queer media Emotional well-being impact", 
+            "Queer media overall psychological well-being impact"),
+  Items = c("7", "4", "7", "6", "8", "21"),
+  Alpha = c(
+    psych::alpha(queer.construct[,20:26], check.keys=TRUE)$total$raw_alpha,
+    psych::alpha(queer.construct[,27:30])$total$raw_alpha,
+    psych::alpha(queer.construct[,31:37])$total$raw_alpha,
+    psych::alpha(queer.construct[,38:43])$total$raw_alpha,
+    psych::alpha(queer.construct[,44:51])$total$raw_alpha,
+    psych::alpha(queer.construct[,31:51])$total$raw_alpha
+  )
+)
+
+reliability_kable$Alpha <- round(reliability_kable$Alpha, 2)
+
+reliability_kable <- reliability_kable %>%
+  mutate(Interpretation = case_when(
+    Alpha < 0.60 ~ "Poor",
+    Alpha < 0.70 ~ "Questionable",
+    Alpha < 0.80 ~ "Acceptable",
+    Alpha < 0.90 ~ "Good",
+    Alpha >= 0.90 ~ "Excellent"
+  ))
+
+kable(reliability_kable, 
+      caption = "Reliability Tests Results",
+      col.names = c("Scale", "Number of Items", "Cronbach's alpha", "Interpretation"),
+      align = c("l", "c", "c", "c"),
+      booktabs = TRUE,
+      format = "latex") %>%
+  kable_styling(latex_options = c("striped", "hold_position"),
+                full_width = FALSE) %>%
+  column_spec(1, width = "5cm") %>%
+  column_spec(2, width = "2.5cm") %>%
+  column_spec(3, width = "2.5cm") %>%
+  column_spec(4, width = "2.5cm")
+
+
+
+```
+
+
+```{r, include=FALSE}
+#| label: Prepare for inline character display
+
+sexual_orientation_inline<- c("asexual","bisexual","gay or lesbian","pansexual","and queer")
+
+
+```
+ 
+### Respondent Characteristics
+167 respondents were eligible for the data analysis after data cleaning. Respondents ranged in age from `r min(queer.hypo$age)` to `r max(queer.hypo$age)` years old. The average age of the sample was `r round(mean(queer.hypo$age), 2)` years old (SD = `r round(sd_age, 2)`). This wide age range ensured the study captured perspectives from individuals across different generations. Respondents' residential countries included `r n_distinct (queer.hypo.country$country)` countries and four continents (see Fig 1), with both developed and developing country status, providing a global perspective. Regarding sexuality, the sample featured a diverse range of identities, with `r round(100 * sum(queer.hypo$gender_identity == "Man") / nrow(queer.hypo), 1)`% identifying as men, `r round(100 * sum(queer.hypo$gender_identity == "Woman") / nrow(queer.hypo), 1)`% as women, and 10.2% as non-binary, genderfluid, gender non-conforming, or agender. Among the sample, `r round(100 * sum(queer.hypo$transgender == "Yes") / nrow(queer.hypo), 1)`% was identified as transgender. The sexual orientation distribution of participants was also diverse, featuring `r sexual_orientation_inline` (see Fig 2). The racial distribution of the sample covered `r round(100 * sum(queer.hypo$race == "White") / nrow(queer.hypo), 1)`% white respondents, `r round(100 * sum(queer.hypo$race == "Black or African-American") / nrow(queer.hypo), 1)`% black or African-American respondents, and 15.5% Asian, Indian, or Alaska native. This rich diversity in age (generation), residential country, gender identity, sexual orientation, and racial identity enables meaningful comparisons and analyses across various LGBTQ+ subgroups and their intersecting identities.
+
+
+
+
+
+   
+::: {#fig-residential layout-ncol=2}
+
+![Country Distribution](Image/Fig 01_Number of participants by country_bar.png){#fig-country}
+
+![Continent Distribution](Image/Fig 02_Number of participants by country_map.png){#fig-continent}
+
+Residential Distribution
+
+:::
+
+![Sexuality Distribution](Image/Fig 03_Gender identity_Transgender status_Sexual orientation_pie.png)
+
 
 
 
 # Results
+
+## Queer Media Characters’ Psychological Impacts on Different LGBTQ+ Subgroups
+
+
+
+
+
+
+
+
+
 
 # Discussion
 
