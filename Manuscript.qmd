@@ -508,7 +508,7 @@ p_value_auth <- pf(f_statistic_auth, df1_auth, df2_auth, lower.tail = FALSE)
 
 ```
 
-A linear regression was conducted to examine the relationship between authenticity rating and psychological wellbeing scores. The results indicated a significant effect of authenticity rating on psychological wellbeing (*F*(`r df1_auth`, `r df2_auth`) = `r round(f_statistic_auth, 2)`, *p* `r if(p_value_auth < .001) "< .001" else paste("=", round(p_value_auth, 3))`). The $R^2$ was `r round(r_squared_auth,3)`, indicating that the perceived queer character authenticity explained `r round(r_squared_auth * 100, 1)`% of the variance in psychological wellbeing scores. This result suggests that the more authentic LGBTQ+ individuals perceive queer media characters, the more positive psychological impacts they may experience.
+A linear regression was conducted to examine the relationship between queer character authenticity rating and psychological wellbeing impact scores. The results indicated a significant effect of authenticity rating on psychological wellbeing (*F*(`r df1_auth`, `r df2_auth`) = `r round(f_statistic_auth, 2)`, *p* `r if(p_value_auth < .001) "< .001" else paste("=", round(p_value_auth, 3))`). The $R^2$ was `r round(r_squared_auth,3)`, indicating that the perceived queer character authenticity explained `r round(r_squared_auth * 100, 1)`% of the variance in psychological wellbeing scores. This result suggests that the more authentic LGBTQ+ individuals perceive queer media characters, the more positive psychological impacts they may experience.
 
 Figure 9 illustrates that the authencity rating positively predicts psychological well-being scores for both developed and developing countries' residents. The regression line for developing countries' residents is steeper than that for developed countries' residents, indicating that the authenticity rating has a stronger effect on psychological well-being scores for developing countries' residents.
 
@@ -580,7 +580,7 @@ print(auth.psych.gender)
 
 Figure 11 illustrates that the authenticity rating positively predicts psychological well-being scores for all sexual orientations.It is worth noting that while data points for asexual, gay or lesbian, and pansexual concentrated on the middle to higher end of the authenticity rating and psychological well-being scores, data points for bisexual were more dispersed with much more low scores for both ratings. This result suggests that bisexual respondents' low psychological impacts scores may be related to the perceived authenticity of queer media characters. 
 
-Figure 12 shows that the authenticity rating positively predicts psychological well-being scores for all racial identities. The regression line for black, asian, and indian respondents is slightly steeper, indicating that the authenticity rating has a stronger effect on psychological well-being scores for these respondents. This result suggests that racial minorities' perceived psychological impacts by queer characters may be more influenced by the perceived character authenticity than white respondents.
+Figure 12 shows that the authenticity rating positively predicts psychological well-being scores for all racial identities. The regression line for black, asian, and indian respondents is slightly steeper, indicating that racial minorities' perceived psychological impacts by queer characters may be more influenced by the perceived character authenticity than white respondents.
 
 
 
@@ -598,7 +598,7 @@ Figure 12 shows that the authenticity rating positively predicts psychological w
 auth.psych.orientation <- ggplot(queer.hypo_filtered, aes(x = authenticity_rating, y = psychological_wellbeing_score)) +
   geom_point(aes(colour = sexual_orientation, shape = sexual_orientation)) +                                
   labs(x = "Authenticity Rating", y = "Queer Characters' Psychological Impact Score") +
-  labs(title = "Authenticity Rating's Impacts on Queer Characters' Psychological Effects by Sexual Orientation") + 
+  labs(title = "Authenticity Rating Predicting Psychological Effects by Sexual Orientation") + 
   scale_y_continuous(breaks = seq(floor(min(queer.hypo$psychological_wellbeing_score)), 
                                   ceiling(max(queer.hypo$psychological_wellbeing_score)), by = 1)) +
   scale_x_continuous(
@@ -622,7 +622,7 @@ print(auth.psych.orientation)
 
 ```{r}
 #| label: fig-plot-auth-psych-impact-race
-#| fig-cap: Authenticity Rating Predicting Psychological Well-being Scores by Racial Identity
+#| fig-cap: Intersectionality Rating Predicting Psychological Well-being Scores by Racial Identity
 #| message: false
 #| fig-width: 11.5
 #| fig-height: 5.5
@@ -630,7 +630,7 @@ print(auth.psych.orientation)
 auth.psych.race <- ggplot(queer.hypo, aes(x = authenticity_rating, y = psychological_wellbeing_score)) +
   geom_point(aes(colour = race_category, shape = race_category)) +                                
   labs(x = "Authenticity Rating", y = "Queer Characters' Psychological Impact Score") +
-  labs(title = "Authenticity Rating's Impacts on Queer Characters' Psychological Effects by Racial Identity") + 
+  labs(title = "Authenticity Rating Predicting Psychological Effects by Racial Identity") + 
   scale_y_continuous(breaks = seq(floor(min(queer.hypo$psychological_wellbeing_score)), 
                                   ceiling(max(queer.hypo$psychological_wellbeing_score)), by = 1)) +
   scale_x_continuous(
@@ -639,8 +639,8 @@ auth.psych.race <- ggplot(queer.hypo, aes(x = authenticity_rating, y = psycholog
     limits = c(floor(min(queer.hypo$authenticity_rating)), ceiling(max(queer.hypo$authenticity_rating)))
   ) +
   stat_smooth(method = "lm", aes(fill = race_category, colour = race_category)) +    
-  scale_colour_manual(name = "Racial Identity", values = c("#cfb5a0","#f1e2c8")) +
-  scale_fill_manual(name = "Racial Identity", values = c("#cfb5a0","#f1e2c8")) +
+  scale_colour_manual(name = "Racial Identity", values = c("black", "#cfb5a0")) +
+  scale_fill_manual(name = "Racial Identity", values = c("black","#cfb5a0")) +
   scale_shape_discrete(name = "Racial Identity") +
   theme.clean() 
 
@@ -650,6 +650,188 @@ print(auth.psych.race)
 
 
 ```
+
+
+
+### Perceived Queer Character Intersectionality
+
+```{r}
+#| label: Linear regression for intersectionality rating predicting psychological well-being scores
+#| include: false
+
+inter.effect <- lm(psychological_wellbeing_score ~ intersectionality_rating, data = queer.hypo)
+summary(inter.effect) 
+
+summary_intersectionality <- summary(inter.effect)
+
+f_statistic_inter <- summary_intersectionality$fstatistic[1]
+df1_inter <- summary_intersectionality$fstatistic[2]
+df2_inter <- summary_intersectionality$fstatistic[3]
+r_squared_inter <- summary_intersectionality$r.squared[1]
+p_value_inter <- pf(f_statistic_inter, df1_inter, df2_inter, lower.tail = FALSE)
+
+
+
+```
+
+
+Linear regression results also indicated a significant effect of queer character intersectionality rating on psychological wellbeing impact scores (*F*(`r df1_inter`, `r df2_inter`) = `r round(f_statistic_inter, 2)`, *p* `r if(p_value_inter < .001) "< .001" else paste("=", round(p_value_inter, 3))`). The $R^2$ was `r round(r_squared_inter,3)`, indicating that the perceived queer character authenticity explained `r round(r_squared_inter * 100, 1)`% of the variance in psychological wellbeing scores. This robust association suggests that LGBTQ+ individuals who perceive queer media characters as more intersectional tend to experience more positive psychological outcomes. 
+
+Figure 13 further indicated that queer characters' intersectionality may be a more significant contributor to psychological impact scores for developing countries' residents than for developed countries' residents. The regression line for developing countries' residents is steeper, with no intersectionality ratings lower than the middle point. Conversely, the regression line for developed countries' residents is flatter, with more low intersectionality ratings and psychological impact scores.
+
+Though the regressioin line slopes for different gender identities were similar regarding intersectionality rating's effects on psychological impact scores, data points for women and other gender identities were more concentrated on the higher end, with lower intersectionality scores predicting relatively higher psychological impact scores than their men counterparts (Figure 14). Men respondents featured more low psychological impact data points even when the intersectionality rating was high. This indicates that the intersectionality rating may contribute to higher psychological impact scores for women and other gender identities, which could be a plausible explanation of men's lower psychological impact scores even if the authenticity ratings predict higher scores for men compared with women and other gender identities. 
+
+```{r}
+#| label: fig-plot-inter-psych-impact-country
+#| fig-cap: Authenticity Rating Predicting Psychological Well-being Scores by Country
+#| message: false
+#| fig-width: 10
+#| fig-height: 5
+
+inter.psych.dev <- ggplot(queer.hypo, aes(x = intersectionality_rating, y = psychological_wellbeing_score)) +
+  geom_point(aes(colour = development_status, shape = development_status)) +                                
+  labs(x = "Intersectionality Rating", y = "Queer Characters' Psychological Impact Score") +
+  labs(title = "Intersectionality Rating Predicting Psychological Effects by Development Status") + 
+  scale_y_continuous(breaks = seq(floor(min(queer.hypo$psychological_wellbeing_score)), 
+                                  ceiling(max(queer.hypo$psychological_wellbeing_score)), by = 1)) +
+  scale_x_continuous(
+    breaks = seq(floor(min(queer.hypo$intersectionality_rating)), 
+                 ceiling(max(queer.hypo$intersectionality_rating)), by = 1),
+    limits = c(floor(min(queer.hypo$intersectionality_rating)), ceiling(max(queer.hypo$intersectionality_rating)))
+  ) +
+  stat_smooth(method = "lm", aes(fill = development_status, colour = development_status)) +    
+  scale_colour_manual(name = "Development Status", values = c("#FFC125", "#36648B")) +
+  scale_fill_manual(name = "Development Status",values = c("#FFC125", "#36648B")) +
+  scale_shape_discrete(name = "Development Status") +
+  theme.clean() 
+
+print(inter.psych.dev)
+
+
+
+
+
+```
+
+
+```{r}
+#| label: fig-plot-inter-psych-impact-gender
+#| fig-cap: Intersectionality Rating Predicting Psychological Well-being Scores by Gender Identity
+#| message: false
+#| fig-width: 10
+#| fig-height: 5.5
+
+inter.psych.gender <- ggplot(queer.hypo, aes(x = intersectionality_rating, y = psychological_wellbeing_score)) +
+  geom_point(aes(colour = gender_identity_dual, shape = gender_identity_dual)) +                                
+  labs(x = "Intersectionality Rating", y = "Queer Characters' Psychological Impact Score") +
+  labs(title = "Intersectionality Rating Predicting Psychological Effects by Gender Identity") + 
+  scale_y_continuous(breaks = seq(floor(min(queer.hypo$psychological_wellbeing_score)), 
+                                  ceiling(max(queer.hypo$psychological_wellbeing_score)), by = 1)) +
+  scale_x_continuous(
+    breaks = seq(floor(min(queer.hypo$intersectionality_rating)), 
+                 ceiling(max(queer.hypo$intersectionality_rating)), by = 1),
+    limits = c(floor(min(queer.hypo$intersectionality_rating)), ceiling(max(queer.hypo$intersectionality_rating)))
+  ) +
+  stat_smooth(method = "lm", aes(fill = gender_identity_dual, colour = gender_identity_dual)) +    
+  scale_colour_manual(name = "Gender Identity", values = c("#6fa8dc", "#d5a6bd")) +
+  scale_fill_manual(name = "Gender Identity", values = c("#6fa8dc", "#d5a6bd")) +
+  scale_shape_discrete(name = "Gender Identity") +
+  theme.clean() 
+
+print(inter.psych.gender)
+
+
+```
+
+
+
+Based on the finding that intersectionality rating contributed to higher psychological impact scores for women and other gender identities, Figure 15 compared both gender identity and sexual orientation on differences in intersectionality rating's prediction of psychological impact scores. The results indicated that intersectionality rating was a stronger predictor of psychological impact scores for bisexual men compared with bisexual women and other gender identities, with a steeper regression line. Nevertheless, the regression line for lesbian women is slightly steeper than gay men, indicating that intersectionality rating may have a stronger effect on psychological impact scores for lesbian than gay. It is worth noting that while the associations between intersectionality rating and psychological impact scores were positive among asexual and pansexual women with relatively small variations, the associations were negative among asexual and pansexual men with more variations and data point proportion below the regression line. Thus, it is plausiable that the negative associations contributed significantly to the lower psychological impact scores predicted by the intersectionality rating for men respondents. 
+
+
+```{r}
+#| label: fig-plot-inter-psych-impact-orientation-gender
+#| fig-cap: Intersectionality Rating Predicting Psychological Well-being Scores by Sexual Orientation and Gender Identity
+#| message: false
+#| warning: false
+#| fig-width: 12
+#| fig-height: 5.5
+
+inter.psych.orientation.gender <- ggplot(queer.hypo_filtered, aes(x = intersectionality_rating, y = psychological_wellbeing_score)) +
+  geom_point(aes(colour = sexual_orientation, shape = sexual_orientation)) +                                
+  labs(x = "Intersectionality Rating", y = "Queer Characters' Psychological Impact Score") +
+  labs(title = "Intersectionality Rating Predicting Psychological Effects by Sexual Orientation and Gender Identity") + 
+  scale_y_continuous(breaks = seq(floor(min(queer.hypo$psychological_wellbeing_score)), 
+                                  ceiling(max(queer.hypo$psychological_wellbeing_score)), by = 1)) +
+  scale_x_continuous(
+    breaks = seq(floor(min(queer.hypo$intersectionality_rating)), 
+                 ceiling(max(queer.hypo$intersectionality_rating)), by = 1),
+    limits = c(floor(min(queer.hypo$intersectionality_rating)), ceiling(max(queer.hypo$intersectionality_rating)))
+  ) +
+  stat_smooth(method = "lm", aes(fill = sexual_orientation, colour = sexual_orientation)) +    
+  scale_colour_manual(name = "Sexual Orientation", values = c("#A3A3A3","#9B4F96","#3D1A78","#FFD800")) +
+  scale_fill_manual(name = "Sexual Orientation", values = c("#A3A3A3","#9B4F96","#3D1A78","#FFD800")) +
+  scale_shape_discrete(name = "Sexual Orientation") +
+  facet_grid(gender_identity_dual ~ sexual_orientation) +
+  theme.clean() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        strip.text = element_text(size = 8),
+        legend.position = "bottom")
+
+print(inter.psych.orientation.gender)
+
+
+
+
+
+```
+
+Figure 16 illustrates that the intersectionality rating positively predicts psychological well-being scores for all racial identities. The regression line for black, asian, and indian respondents is steeper with more data points concentrated on the higher end of the intersectionality rating and psychological impact scores. This indicates that racial minorities' perceived psychological impacts by queer characters may be more influenced by the perceived character intersectionality than white respondents.
+
+
+
+
+
+
+
+
+```{r}
+#| label: fig-plot-inter-psych-impact-race
+#| fig-cap: Intersectionality Rating Predicting Psychological Well-being Scores by Racial Identity
+#| message: false
+#| fig-width: 11.5
+#| fig-height: 5.5
+
+inter.psych.race <- ggplot(queer.hypo, aes(x = intersectionality_rating, y = psychological_wellbeing_score)) +
+  geom_point(aes(colour = race_category, shape = race_category)) +                                
+  labs(x = "Intersectionality Rating", y = "Queer Characters' Psychological Impact Score") +
+  labs(title = "Intersectionality Rating Predicting Psychological Effects by Racial Identity") + 
+  scale_y_continuous(breaks = seq(floor(min(queer.hypo$psychological_wellbeing_score)), 
+                                  ceiling(max(queer.hypo$psychological_wellbeing_score)), by = 1)) +
+  scale_x_continuous(
+    breaks = seq(floor(min(queer.hypo$intersectionality_rating)), 
+                 ceiling(max(queer.hypo$intersectionality_rating)), by = 1),
+    limits = c(floor(min(queer.hypo$intersectionality_rating)), ceiling(max(queer.hypo$intersectionality_rating)))
+  ) +
+  stat_smooth(method = "lm", aes(fill = race_category, colour = race_category)) +    
+  scale_colour_manual(name = "Racial Identity", values = c("black", "#cfb5a0")) +
+  scale_fill_manual(name = "Racial Identity", values = c("black", "#cfb5a0")) +
+  scale_shape_discrete(name = "Racial Identity") +
+  theme.clean() 
+
+print(inter.psych.race)
+
+
+```
+
+
+
+
+
+
+
+
+
+
 
 
 # Discussion
