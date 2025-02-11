@@ -1006,7 +1006,6 @@ inter.psych.orientation.gender <- ggplot(queer.hypo_filtered, aes(x = intersecti
 
 print(inter.psych.orientation.gender)
 
-# Bisexual men are more likely to have extreme values for intersectionality rating and psychological impact scores on the lower side, bisexual women feature higher intersectionality and psychological impact scores
 # Gay have more variances
 # Asexual and pansexual women are more likely to draw the positive relationship between intersectionality and psychological impacts, while asexual and pansexual men are more likely to have the negative relationship
 
