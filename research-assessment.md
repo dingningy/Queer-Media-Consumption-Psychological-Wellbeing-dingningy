@@ -24,23 +24,23 @@ To complete this assessment:
 
 ## Basic information
 
-Name:
+Name: Dingning Yang
 
-CNetID:
+CNetID: dingningy
 
-Section:
+Section: Section 2
 
-Research project title:
+Research project title: Exploring the Impact of Queer Media Characters on LGBTQ+ Psychological Well-Being: The Role of Queer Media Consumption, Perceived Authenticity, and Intersectionality
 
-Submission date:
+Submission date: Feb 13, 2025
 
-Submission number (1-4):
+Submission number (1-4): 1
 
-Project GitHub repository URL:
+Project GitHub repository URL: https://github.com/dingningy/Queer-Media-Consumption-Psychological-Wellbeing-dingningy.git
 
-Filename of manuscript .qmd:
+Filename of manuscript .qmd: Queer Characters and LGBTQ+ Well-being.qmd
 
-Filename of knitted .pdf:
+Filename of knitted .pdf: Queer Characters and LGBTQ+ Well-being.pdf
 
 ## Overall requirements
 
@@ -89,7 +89,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2.  Uses relative paths correctly
     3.  Does not have duplicate/redundant elements
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments: 
 
@@ -98,7 +98,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1.  Includes description of repo purpose, data use, research questions, etc.
     2.  Outlines the repo structure with file tree or similar
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -107,7 +107,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1.  All scripts run and all notebooks render if the repo is cloned to another location
     2.  .gitingore comprehensively excludes unnecessary, private, and very large files and is be commeted appropriately
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -116,7 +116,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1.  Used frequent, informative commit messages
     2.  Relies on document revisions rather than manually created new versions
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -129,7 +129,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
         2. When a reader opts-in to installing packages by uncommenting the code, it runs without errors 
     2. Uses more than one function to install/load/require packages (including those used in commented code)
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         
@@ -138,9 +138,9 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1. Uses all three types of operators
     2. Uses multiple operators in data transformation pipelines and/or inline R code
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: See `Data Analysis.R` lines 358-364; `Data Transformation.R` lines 100-111
 
 7.  Parse and define functions and arguments
 
@@ -148,18 +148,18 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. User-defined function(s) run(s) without error and produces expected output in at least 2 contexts
     3. Functions are well-documented with comments
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: I created eight functions in the `Data Analysis.R` script. One for classifying country, four to create bubble plots, one related to color palettes, one for shiny UI throughout the shiny app designs, and one for the general theme for all my ggplot outputs. Please run the whole script and find functions in the environment. 
 
 8.  Parse and write conditional statements and/or loops
 
     1. Uses conditional in multiple contexts, including dplyr pipelines
     2. Uses multiple types of conditional/loop functions (e.g., `if_else()`, `case_when()`, `for`, `while`)
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: See `Data Cleaning.R` lines 60-71; `Data Transformation.R` lines 180-212
         
 
 9.  Use `readr` functions to read in and write out data
@@ -167,9 +167,9 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1. Reads in data from at least one source in code chunk or sourced script
     2. Writes out intermediate and/or final datasets in code chunks or sourced scripts
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: See both manuscript qmd and source scripts for read-ins. See `Data Cleaning.R` lines 229-230; `Data Transformation.R` lines 220-222 for write-outs.
 
 10. Use `dplyr` and `tidyr` functions to transform data
 
@@ -177,27 +177,27 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Uses at least 1 `tidyr` function in a data transformation pipeline
     3. Combines `dplyr` and `tidyr` functions in a data transformation pipeline
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: See `Data Cleaning.R` lines, I used select, slice, tally, arrange, distinct, etc. for dplyr; see `Data Transformation.R` lines 134-148 for tidyr.
 
 11. Use `stringr` functions to work with string variables
 
     1. Uses ate least 2 unique `stringr` functions 
     2. Uses `stringr` functions in a data transformation pipeline
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: See `Data Cleaning.R` lines 74-77 for changing case; `Data Transformation.R` lines 125-132 for replace.
 
 12. Use `forcats` functions to work with factor variables
 
     1. Uses ate least 2 unique `forcats` functions or one function in 2 unique contexts (with different purposes)
     2. Uses `forcats` functions in a data transformation pipeline
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
+        -   Grader comments: See `Data Transformation.R` lines 10-35 as.factor; `Data Analysis.R` lines 204-217 for recode.
 
 ### Data visualization with ggplot2
 
@@ -206,7 +206,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1. Creates at least 2 figures with different `geom_*` layers (e.g., a scatter plot and a bar plot)
     2. At least one plot is multi-variable
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -214,7 +214,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
     1. Uses at least 2 unique data-mapped `aes()` arguments (e.g., color, shape, size) to group data in a plot in one or multiple plots
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         
@@ -223,7 +223,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1. Uses facets in at least 2 ways (e.g., using both `facet_wrap()` and `facet_grid()`), modifying the number of rows and columns, using free vs fixed scales, etc.)
     2. Combines facets with other dynamic grouping aesthetics
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         
@@ -234,7 +234,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3. Variables display in plain English (e.g., "Age (years)" not "child_age_yrs"
     4. Uses at least 1 static aesthetic (e.g., color, shape, size) that improves visual clarity without mapping to data
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -246,7 +246,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Calculates summary/descriptive statistics for at least 1 non-numeric variable (e.g., frequencies, proportions)
     3. Presents results in narrative text, table, or plot
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -256,7 +256,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Performs at least 1 hypothesis test for factor data (e.g., chi-square, ANOVA)
     3. Presents results in narrative text, table, or plot
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -267,7 +267,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3. Discriminates between informative and non-informative statistics and presents only the former in narrative text
     4. Uses dynamic inline R code to render data-dependent text
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -279,7 +279,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Uses at least 2 citation forms (e.g., (Author, Year), Author (Year), etc.)
     3. May use `cite_r()` to cite R and R packages
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -291,7 +291,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     4. May include R and R package citations with `cite_r()`
     5. May include references not cited in-text
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -304,7 +304,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3.  Follows the "1-chunk-1-thing" rule
     4.  Chunks are distributed throughout the manuscript, sensibly placed near the text they support
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments: 
         
@@ -315,7 +315,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3. Sets preferences/options in at least 1 code chunk
     4. Organizes setup chunks sensibly
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         
@@ -327,7 +327,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     4. All tables and figures are referenced in the narrative text (e.g., Figure 1)
     5. References render without error and link to the correct table/figure in pdf/html output
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -339,7 +339,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     4. Results are not displayed as raw R output
     5. Chunks are organized sensibly and appear near the text they support
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -349,7 +349,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     
     1. Includes all necessary metadata, output options, and formatting options necessary to render an APA styled document (or other specified style if appropriate for the project)
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         
@@ -361,7 +361,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     4. Includes at least 1 footnote
     - NOTE: This is going to be one of the most flexible objectives to demonstrate.  You need to demonstrate a range of markdown skills and use them to make a readable, informative manuscript. Hitting the four points above should do that, but you can use your judgment about what kind of markdown features will best serve your project. No matter what, you should use markdown to follow APA7 guidelines.
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -371,7 +371,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Replaces static text with inline R references in at least 1 character context
     3. Ideally, uses inline R references for *all* data-dependent text
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -379,7 +379,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
     1. Uses inline R functions to render at least 3 unique data-dependent text outputs (e.g., performs rounding, calculates means, subtracts one list length from another, etc. -- inline rather than in a code chunk)
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         
@@ -390,7 +390,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3. PDF renders without error and includes all text, tables, and figures
     4. No additional steps are needed (e.g., finding data, determining necessary packages to install and load, running unsourced scripts)
 
-        -   [ ] Objective attempt
+        -   [✔] Objective attempt
         -   [ ] Objective met
         -   Grader comments:        
         
