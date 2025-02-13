@@ -28,7 +28,7 @@ This repository contains the manuscript, data, images, and code for the final re
 
 7. **Version Control**:
    - [.gitignore](./.gitignore): Specifies intentionally untracked files to ignore.
-   - [R Project](./queer%characters.Rproj): R Project synchronized with GitHub version control. 
+   - [[R Project](./queer%20characters.Rproj): R Project synchronized with GitHub version control. 
      
 
 This repository aims to ensure transparency, reproducibility, and accessibility of our research. It provides a comprehensive collection of all materials used in the study, from raw data to the final manuscript, allowing for thorough peer review and potential replication of our findings.
