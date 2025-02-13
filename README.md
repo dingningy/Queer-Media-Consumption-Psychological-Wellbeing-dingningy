@@ -24,6 +24,7 @@ This repository contains the manuscript, data, images, and code for the final re
 6. **Documentation**:
    - [README.md](./README.md): Overview of the project, repository structure, and instructions for replication.
    - [References.bib](./References.bib): Bibliography file containing all cited works.
+   - [APA Quarto extensions](./_extensions/wjschne/apaquarto): APA Quarto extension files needed for producing the manuscript
 
 7. **Version Control**:
    - [.gitignore](./.gitignore): Specifies intentionally untracked files to ignore.
