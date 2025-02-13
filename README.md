@@ -6,25 +6,26 @@ This repository contains the manuscript, data, images, and code for the final re
 
 
 ### :card_file_box:Repository Contents
-1. **Manuscript**: 
+1. **Manuscript**:
+   - [Manuscript.qmd](./Queer%20Characters%20and%20LGBTQ%2B%20Well-being.qmd)
    - [Manuscript.qmd](./Queer Characters and LGBTQ+ Well-being.qmd): Quarto document containing the full research paper.
 
-2. **Source Code**:
+3. **Source Code**:
    - [Data Cleaning.R](./Source/Data%20Cleaning.R): Script for cleaning and preprocessing raw data.
    - [Data Transformation.R](./Source/Data%20Transformation.R): Script for transforming cleaned data for analysis.
    - [Data Analysis.R](./Source/Data%20Analysis.R): Script containing statistical analyses, exploratory analysis, hypothesis testing, and data visualization. 
 
-3. **Datasets**:
+4. **Datasets**:
    - [Data](./Data/): Directory containing two original, unprocessed survey datasets, one cleaned dataset, and two transformed datasets for data analysis. 
   
-4. **Visualizations**:
+5. **Visualizations**:
    - [Image](./Image): Directory containing all 25 data visualizations and figures used in either the manuscript or data visualization R script.
 
-5. **Documentation**:
+6. **Documentation**:
    - [README.md](./README.md): Overview of the project, repository structure, and instructions for replication.
    - [References.bib](./References.bib): Bibliography file containing all cited works.
 
-6. **Version Control**:
+7. **Version Control**:
    - [.gitignore](./.gitignore): Specifies intentionally untracked files to ignore.
 
 This repository aims to ensure transparency, reproducibility, and accessibility of our research. It provides a comprehensive collection of all materials used in the study, from raw data to the final manuscript, allowing for thorough peer review and potential replication of our findings.
