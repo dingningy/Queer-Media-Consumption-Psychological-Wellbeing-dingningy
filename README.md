@@ -8,7 +8,7 @@ This repository contains the manuscript, data, images, and code for the final re
 ### :card_file_box:Repository Contents
 1. **Manuscript**:
    - [Manuscript.qmd](./Queer%20Characters%20and%20LGBTQ%2B%20Well-being.qmd): Quarto document containing the full research paper.
-   - [Manuscript.pdf](./Queer%20Characters%20and%20LGBTQ%2B%20Well-being.pdf): PDF document containing the full research paper.
+   - [Manuscript.pdf](./Queer-Characters-and-LGBTQ+-Well-being.pdf): PDF document containing the full research paper.
 
 3. **Source Code**:
    - [Data Cleaning.R](./Source/Data%20Cleaning.R): Script for cleaning and preprocessing raw data.
