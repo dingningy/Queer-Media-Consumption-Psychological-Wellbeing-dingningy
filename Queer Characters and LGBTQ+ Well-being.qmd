@@ -46,6 +46,7 @@ format:
         \linespread{2}
         \renewcommand{\footnotesize}{\fontsize{8}{10}\selectfont}
 bibliography: References.bib
+  
 ---
 
 ```{r}
@@ -133,15 +134,15 @@ source("Source/Data Analysis.R")
 ```
 
 ### Reliability Tests
-Reliability analyses were conducted to assess the internal consistency of the measurement scales used in this study (Table 1). Cronbach's alpha coefficients were calculated for each scale. Specifically, the authenticity rating measurement demonstrated satisfactory reliability (α = 0.76). The intersectionality rating measurement showed excellent reliability (α = 0.91). Both the media individual development scale and the media community belonging scale exhibited excellent reliability (α = 0.96 for both). The emotional well-being measurement also demonstrated excellent reliability (α = 0.96). Finally, the overall psychological well-being measurement showed the highest reliability with an excellent Cronbach's alpha of 0.98. These results indicate that all scales used in this study have good to excellent internal consistency, suggesting they are reliable measures of their respective constructs.
+Reliability analyses were conducted to assess the internal consistency of the measurement scales used in this study (@tbl-reliability). Cronbach's alpha coefficients were calculated for each scale. Specifically, the authenticity rating measurement demonstrated satisfactory reliability (α = 0.76). The intersectionality rating measurement showed excellent reliability (α = 0.91). Both the media individual development scale and the media community belonging scale exhibited excellent reliability (α = 0.96 for both). The emotional well-being measurement also demonstrated excellent reliability (α = 0.96). Finally, the overall psychological well-being measurement showed the highest reliability with an excellent Cronbach's alpha of 0.98. These results indicate that all scales used in this study have good to excellent internal consistency, suggesting they are reliable measures of their respective constructs.
 
 
 ```{r}
-#| label: Generate reliability test tables
+#| label: tbl-reliability
+#| tbl-cap: "Reliability Analysis Results"
 #| echo: false
 #| warning: false
 #| message: false
-#| tbl-cap: "Reliability Analysis Results"
 
 reliability_kable <- data.frame(
   Scale = c("Authenticity rating", 
@@ -173,18 +174,16 @@ reliability_kable <- reliability_kable %>%
   ))
 
 kable(reliability_kable, 
-      caption = "Reliability Tests Results",
       col.names = c("Scale", "Number of Items", "Cronbach's alpha", "Interpretation"),
       align = c("l", "c", "c", "c"),
-      booktabs = TRUE,
-      format = "latex") %>%
+      booktabs = TRUE) %>%
   kable_styling(latex_options = c("striped", "hold_position"),
-                full_width = FALSE) %>%
+                full_width = FALSE,
+                ) %>% 
   column_spec(1, width = "5cm") %>%
   column_spec(2, width = "2.5cm") %>%
   column_spec(3, width = "2.5cm") %>%
   column_spec(4, width = "2.5cm")
-
 
 
 ```
@@ -200,7 +199,7 @@ sexual_orientation_inline<- c("asexual","bisexual","gay or lesbian","pansexual",
 ```
  
 ### Respondent Characteristics
-167 respondents were eligible for the data analysis after data cleaning. Respondents ranged in age from `r min(queer.hypo$age)` to `r max(queer.hypo$age)` years old. The average age of the sample was `r round(mean(queer.hypo$age), 1)` years old (*SD* = `r round(sd_age, 1)`). This wide age range ensured the study captured perspectives from individuals across different generations. Respondents' residential countries included `r n_distinct (queer.hypo.country$country)` countries and four continents (Figure 1), with both developed and developing country status, providing a global perspective. Regarding sexuality, the sample featured a diverse range of identities, with `r round(100 * sum(queer.hypo$gender_identity == "Man") / nrow(queer.hypo), 1)`% identifying as men, `r round(100 * sum(queer.hypo$gender_identity == "Woman") / nrow(queer.hypo), 1)`% as women, and 10.2% as nonbinary, genderfluid, gender non-conforming, or agender. Among the sample, `r round(100 * sum(queer.hypo$transgender == "Yes") / nrow(queer.hypo), 1)`% was identified as transgender. The sexual orientation distribution of participants was also diverse, featuring `r sexual_orientation_inline` (Figure 2). The racial distribution of the sample covered `r round(100 * sum(queer.hypo$race == "White") / nrow(queer.hypo), 1)`% white respondents, `r round(100 * sum(queer.hypo$race == "Black or African-American") / nrow(queer.hypo), 1)`% black or African-American respondents, and 15.5% Asian, Indian, or Alaska native. This rich diversity in age (generation), residential country, gender identity, sexual orientation, and racial identity enables meaningful comparisons and analyses across various LGBTQ+ subgroups and their intersectional identities.
+167 respondents were eligible for the data analysis after data cleaning. Respondents ranged in age from `r min(queer.hypo$age)` to `r max(queer.hypo$age)` years old. The average age of the sample was `r round(mean(queer.hypo$age), 1)` years old (*SD* = `r round(sd_age, 1)`). This wide age range ensured the study captured perspectives from individuals across different generations. Respondents' residential countries included `r n_distinct (queer.hypo.country$country)` countries and four continents (@fig-residential), with both developed and developing country status, providing a global perspective. Regarding sexuality, the sample featured a diverse range of identities, with `r round(100 * sum(queer.hypo$gender_identity == "Man") / nrow(queer.hypo), 1)`% identifying as men, `r round(100 * sum(queer.hypo$gender_identity == "Woman") / nrow(queer.hypo), 1)`% as women, and 10.2% as nonbinary, genderfluid, gender non-conforming, or agender. Among the sample, `r round(100 * sum(queer.hypo$transgender == "Yes") / nrow(queer.hypo), 1)`% was identified as transgender. The sexual orientation distribution of participants was also diverse, featuring `r sexual_orientation_inline` (@fig-sexuality). The racial distribution of the sample covered `r round(100 * sum(queer.hypo$race == "White") / nrow(queer.hypo), 1)`% white respondents, `r round(100 * sum(queer.hypo$race == "Black or African-American") / nrow(queer.hypo), 1)`% black or African-American respondents, and 15.5% Asian, Indian, or Alaska native. This rich diversity in age (generation), residential country, gender identity, sexual orientation, and racial identity enables meaningful comparisons and analyses across various LGBTQ+ subgroups and their intersectional identities.
 
 
 
@@ -217,7 +216,7 @@ Residential Distribution
 
 :::
 
-![Sexuality Distribution](Image/Fig 03_Gender identity_Transgender status_Sexual orientation_pie.png)
+![Sexuality Distribution](Image/Fig 03_Gender identity_Transgender status_Sexual orientation_pie.png){#fig-sexuality}
 
 
 
@@ -281,9 +280,9 @@ summary_race_effect <- summary(anova_race_effect)[[1]]
 
 
 
-One-way ANOVA results showed that there were no significant differences or directional effects in queer media characters’ psychological impacts among different generations (*p* = 0.70) or between transgenders and non-transgenders (*p* = 0.25). However, significant differences were found between developed and developing countries' residents (Figure 3). Specifically, residents in developed countries showed lower psychological impact scores by queer media characters than those in developing countries ($M_{\text{developed}} = `r round(mean(queer.hypo$psychological_wellbeing_score[queer.hypo$development_status == "Developed"]), 2)`$ vs. $M_{\text{developing}} = `r round(mean(queer.hypo$psychological_wellbeing_score[queer.hypo$development_status == "Developing"]), 2)`$; *F*(`r summary_country_effect$Df[1]`, `r summary_country_effect$Df[2]`) = `r round(summary_country_effect$"F value"[1], 2)`; *p* = `r sprintf("%.3f", summary_country_effect$"Pr(>F)"[1])`). 
+One-way ANOVA results showed that there were no significant differences or directional effects in queer media characters’ psychological impacts among different generations (*p* = 0.70) or between transgenders and non-transgenders (*p* = 0.25). However, significant differences were found between developed and developing countries' residents (@fig-plot-country-psych-impact). Specifically, residents in developed countries showed lower psychological impact scores by queer media characters than those in developing countries ($M_{\text{developed}} = `r round(mean(queer.hypo$psychological_wellbeing_score[queer.hypo$development_status == "Developed"]), 2)`$ vs. $M_{\text{developing}} = `r round(mean(queer.hypo$psychological_wellbeing_score[queer.hypo$development_status == "Developing"]), 2)`$; *F*(`r summary_country_effect$Df[1]`, `r summary_country_effect$Df[2]`) = `r round(summary_country_effect$"F value"[1], 2)`; *p* = `r sprintf("%.3f", summary_country_effect$"Pr(>F)"[1])`). 
 
-Though the ANOVA result did not show significant differences among different gender identities, there was a directional effect indicated by the violin plot (Figure 4). Specifically, men showed lower psychological impact scores than women and other gender identities ($M_{\text{men}} = `r round(mean(queer.hypo$psychological_wellbeing_score[queer.hypo$gender_identity_dual == "Man"]), 2)`$ vs. $M_{\text{womenother}} = `r round(mean(queer.hypo$psychological_wellbeing_score[queer.hypo$gender_identity_dual == "Women, or nonbinary, or agender"]), 2)`$; *F*(`r summary_gender_effect$Df[1]`, `r summary_gender_effect$Df[2]`) = `r round(summary_gender_effect$"F value"[1], 2)`; *p* = `r sprintf("%.3f", summary_gender_effect$"Pr(>F)"[1])`). The distribution also indicated that men have more low score distributions than their women or nonbinary counterparts. Regarding sexual orientation, the ANOVA result did not show significant differences among different sexual orientations. Nevertheless, there was also a directional effect (Figure 5). Specifically, bisexual individuals showed the lowest psychological impact scores among all sexual orientations, while gay or lesbian had the highest impact scores (*F*(`r summary_orientation_effect$Df[1]`, `r summary_orientation_effect$Df[2]`) = `r round(summary_orientation_effect$"F value"[1], 2)`; *p* = `r sprintf("%.3f", summary_orientation_effect$"Pr(>F)"[1])`). 
+
 
 ```{r}
 #| label: fig-plot-country-psych-impact
@@ -334,6 +333,8 @@ print (country_effect_boxplot)
 
 ```
 
+Though the ANOVA result did not show significant differences among different gender identities, there was a directional effect indicated by the violin plot (@fig-plot-gender-psych-impact). Specifically, men showed lower psychological impact scores than women and other gender identities ($M_{\text{men}} = `r round(mean(queer.hypo$psychological_wellbeing_score[queer.hypo$gender_identity_dual == "Man"]), 2)`$ vs. $M_{\text{womenother}} = `r round(mean(queer.hypo$psychological_wellbeing_score[queer.hypo$gender_identity_dual == "Women, or nonbinary, or agender"]), 2)`$; *F*(`r summary_gender_effect$Df[1]`, `r summary_gender_effect$Df[2]`) = `r round(summary_gender_effect$"F value"[1], 2)`; *p* = `r sprintf("%.3f", summary_gender_effect$"Pr(>F)"[1])`). The distribution also indicated that men have more low score distributions than their women or nonbinary counterparts. Regarding sexual orientation, the ANOVA result did not show significant differences among different sexual orientations. Nevertheless, there was also a directional effect (@fig-plot-orientation-psych-impact). Specifically, bisexual individuals showed the lowest psychological impact scores among all sexual orientations, while gay or lesbian had the highest impact scores (*F*(`r summary_orientation_effect$Df[1]`, `r summary_orientation_effect$Df[2]`) = `r round(summary_orientation_effect$"F value"[1], 2)`; *p* = `r sprintf("%.3f", summary_orientation_effect$"Pr(>F)"[1])`). 
+
 ```{r}
 #| label: fig-plot-gender-psych-impact
 #| fig-cap: Gender Identity Difference of Queer Characters' Psychological Impacts
@@ -367,9 +368,13 @@ print (gender_identity_effect_violinplot)
 ```
 
 
-![Sexual Orientation Comparison of Queer Characters' Psychological Impacts](Image/Fig 10_Orientation_Psych_box.png)
 
-Racial differences in queer media characters’ psychological impacts were marginally significant (Figure 6). Specifically, white respondents showed lower psychological impact scores than other racial groups ($M_{\text{white}} = `r round(mean(queer.hypo$psychological_wellbeing_score[queer.hypo$race_category == "White"]), 2)`$ vs. $M_{\text{blackother}} = `r round(mean(queer.hypo$psychological_wellbeing_score[queer.hypo$race_category == "Black, Asian, Indian, and Others"]), 2)`$; *F*(`r summary_race_effect$Df[1]`, `r summary_race_effect$Df[2]`) = `r round(summary_race_effect$"F value"[1], 2)`; *p* = `r sprintf("%.3f", summary_race_effect$"Pr(>F)"[1])`). 
+
+
+
+![Sexual Orientation Comparison of Queer Characters' Psychological Impacts](Image/Fig 10_Orientation_Psych_box.png){#fig-plot-orientation-psych-impact}
+
+ Racial differences in queer media characters’ psychological impacts were marginally significant (@fig-plot-race-psych-impact). Specifically, white respondents showed lower psychological impact scores than other racial groups ($M_{\text{white}} = `r round(mean(queer.hypo$psychological_wellbeing_score[queer.hypo$race_category == "White"]), 2)`$ vs. $M_{\text{blackother}} = `r round(mean(queer.hypo$psychological_wellbeing_score[queer.hypo$race_category == "Black, Asian, Indian, and Others"]), 2)`$; *F*(`r summary_race_effect$Df[1]`, `r summary_race_effect$Df[2]`) = `r round(summary_race_effect$"F value"[1], 2)`; *p* = `r sprintf("%.3f", summary_race_effect$"Pr(>F)"[1])`).
 
 
 
@@ -411,7 +416,7 @@ print (race_effect_boxplot)
 
 ### Queer Media Consumption Habits
 
-Data visualization of bubble plots revealed that queer media exposure frequency and engagement may predict queer media characters’ psychological impacts on LGBTQ+ individuals. The bubble plot for queer media exposure and discussion frequency indicated that developed countries have more participants who engaged less with queer media characters, which may contribute to lower impact scores (Figure 7). Though bubbles for developing countries were smaller, it was the result of a much smaller sample size (*n* = 22) for developing countries' residents than for developed countries' residents (*n* = 145). The bubble plot featuring different gender identities also showed that women, nonbinary, and agender respondents have higher discussion frequency of queer media representations than men (Figure 8), which may contribute to higher community belonging scores and the overall psychological impact scores. 
+Data visualization of bubble plots revealed that queer media exposure frequency and engagement may predict queer media characters’ psychological impacts on LGBTQ+ individuals. The bubble plot for queer media exposure and discussion frequency indicated that developed countries have more participants who engaged less with queer media characters, which may contribute to lower impact scores (@fig-plot-country-freq). Though bubbles for developing countries were smaller, it was the result of a much smaller sample size (*n* = 22) for developing countries' residents than for developed countries' residents (*n* = 145). The bubble plot featuring different gender identities also showed that women, nonbinary, and agender respondents have higher discussion frequency of queer media representations than men (@fig-plot-gender-freq), which may contribute to higher community belonging scores and the overall psychological impact scores. 
 
 
 
@@ -510,9 +515,9 @@ p_value_auth <- pf(f_statistic_auth, df1_auth, df2_auth, lower.tail = FALSE)
 
 A linear regression was conducted to examine the relationship between queer character authenticity rating and psychological wellbeing impact scores. The results indicated a significant effect of authenticity rating on psychological wellbeing (*F*(`r df1_auth`, `r df2_auth`) = `r round(f_statistic_auth, 2)`, *p* `r if(p_value_auth < .001) "< .001" else paste("=", round(p_value_auth, 3))`). The $R^2$ was `r round(r_squared_auth,3)`, indicating that the perceived queer character authenticity explained `r round(r_squared_auth * 100, 1)`% of the variance in psychological wellbeing scores. This result suggests that the more authentic LGBTQ+ individuals perceive queer media characters, the more positive psychological impacts they may experience.
 
-Figure 9 illustrates that the authencity rating positively predicts psychological well-being scores for both developed and developing countries' residents. The regression line for developing countries' residents is steeper than that for developed countries' residents, indicating that the authenticity rating has a stronger effect on psychological well-being scores for developing countries' residents.
+@fig-plot-auth-psych-impact-country illustrates that the authencity rating positively predicts psychological well-being scores for both developed and developing countries' residents. The regression line for developing countries' residents is steeper than that for developed countries' residents, indicating that the authenticity rating has a stronger effect on psychological well-being scores for developing countries' residents.
 
-Figure 10 indicates that the authenticity rating positively predicts psychological well-being scores for all gender identities. The regression line for men is steeper, indicating that the authenticity rating has a stronger effect on psychological wellbeing scores for men. Nevertheless, given the fact that men have lower psychological impact scores, the authenticity rating may not be the only factor influencing psychological impact scores. 
+@fig-plot-auth-psych-impact-gender indicates that the authenticity rating positively predicts psychological well-being scores for all gender identities. The regression line for men is steeper, indicating that the authenticity rating has a stronger effect on psychological wellbeing scores for men. Nevertheless, given the fact that men have lower psychological impact scores, the authenticity rating may not be the only factor influencing psychological impact scores. 
 
 
 
@@ -578,9 +583,9 @@ print(auth.psych.gender)
 ```
 
 
-Figure 11 illustrates that the authenticity rating positively predicts psychological well-being scores for all sexual orientations. It is worth noting that while data points for asexual, gay or lesbian, and pansexual concentrated on the middle to higher end of the authenticity rating and psychological well-being scores, data points for bisexual were more dispersed with much more low score distributions for both ratings. This result suggests that bisexual respondents' low psychological impacts scores may be related to the perceived authenticity of bisexual media characters. 
+@fig-plot-auth-psych-impact-orientation illustrates that the authenticity rating positively predicts psychological well-being scores for all sexual orientations. It is worth noting that while data points for asexual, gay or lesbian, and pansexual concentrated on the middle to higher end of the authenticity rating and psychological well-being scores, data points for bisexual were more dispersed with much more low score distributions for both ratings. This result suggests that bisexual respondents' low psychological impacts scores may be related to the perceived authenticity of bisexual media characters. 
 
-Figure 12 shows that the authenticity rating positively predicts psychological well-being scores for all racial identities. The regression line for black, asian, and indian respondents is slightly steeper, indicating that racial minorities' perceived psychological impacts by queer characters may be more influenced by the perceived character authenticity than white respondents.
+@fig-plot-auth-psych-impact-race shows that the authenticity rating positively predicts psychological well-being scores for all racial identities. The regression line for black, asian, and indian respondents is slightly steeper, indicating that racial minorities' perceived psychological impacts by queer characters may be more influenced by the perceived character authenticity than white respondents.
 
 
 
@@ -677,9 +682,9 @@ p_value_inter <- pf(f_statistic_inter, df1_inter, df2_inter, lower.tail = FALSE)
 
 Linear regression results also indicated a significant effect of queer character intersectionality rating on psychological wellbeing impact scores (*F*(`r df1_inter`, `r df2_inter`) = `r round(f_statistic_inter, 2)`, *p* `r if(p_value_inter < .001) "< .001" else paste("=", round(p_value_inter, 3))`). The $R^2$ was `r round(r_squared_inter,3)`, indicating that the perceived queer character intersectionality explained `r round(r_squared_inter * 100, 1)`% of the variance in psychological wellbeing scores. This robust association suggests that LGBTQ+ individuals who perceive queer media characters as more intersectional and diverse tend to experience more positive psychological outcomes. 
 
-Figure 13 further indicated that queer characters' intersectionality may be a more significant contributor to psychological impact scores for developing countries' residents than for developed countries' residents. The regression line for developing countries' residents is steeper, with no intersectionality ratings lower than the middle point. Conversely, the regression line for developed countries' residents is flatter, with more low intersectionality ratings and psychological impact scores.
+@fig-plot-inter-psych-impact-country further indicated that queer characters' intersectionality may be a more significant contributor to psychological impact scores for developing countries' residents than for developed countries' residents. The regression line for developing countries' residents is steeper, with no intersectionality ratings lower than the middle point. Conversely, the regression line for developed countries' residents is flatter, with more low intersectionality ratings and psychological impact scores.
 
-Though the regressioin line slopes for different gender identities were similar regarding intersectionality rating's effects on psychological impact scores, data points for women and other gender identities were more concentrated on the higher end, with lower intersectionality scores predicting relatively higher psychological impact scores than their men counterparts (Figure 14). Men respondents featured more low psychological impact data points even when the intersectionality rating was high. This indicates that the intersectionality rating may contribute to higher psychological impact scores for women and other gender identities, which could be a plausible explanation of men's lower psychological impact scores even if the authenticity ratings predict higher scores for men compared with women and other gender identities. 
+Though the regressioin line slopes for different gender identities were similar regarding intersectionality rating's effects on psychological impact scores, data points for women and other gender identities were more concentrated on the higher end, with lower intersectionality scores predicting relatively higher psychological impact scores than their men counterparts (@fig-plot-inter-psych-impact-gender). Men respondents featured more low psychological impact data points even when the intersectionality rating was high. This indicates that the intersectionality rating may contribute to higher psychological impact scores for women and other gender identities, which could be a plausible explanation of men's lower psychological impact scores even if the authenticity ratings predict higher scores for men compared with women and other gender identities. 
 
 ```{r}
 #| label: fig-plot-inter-psych-impact-country
@@ -745,7 +750,7 @@ print(inter.psych.gender)
 
 
 
-Based on the finding that intersectionality rating contributed to higher psychological impact scores for women and other gender identities, Figure 15 compared both gender identity and sexual orientation on differences in intersectionality rating's prediction of psychological impact scores. The results indicated that intersectionality rating was a stronger predictor of psychological impact scores for bisexual men compared with bisexual women and other gender identities, with a steeper regression line. Nevertheless, the regression line for lesbian women is slightly steeper than gay men, indicating that intersectionality rating may have a stronger effect on psychological impact scores for lesbian than gay. It is worth noting that while the associations between intersectionality rating and psychological impact scores were positive among asexual and pansexual women with relatively small variations, the associations were negative among asexual and pansexual men with more variations and data point proportion below the regression line. Thus, it is plausiable that the negative associations contributed significantly to the lower psychological impact scores predicted by the intersectionality rating for men respondents. 
+Based on the finding that intersectionality rating contributed to higher psychological impact scores for women and other gender identities, @fig-plot-inter-psych-impact-orientation-gender compared both gender identity and sexual orientation on differences in intersectionality rating's prediction of psychological impact scores. The results indicated that intersectionality rating was a stronger predictor of psychological impact scores for bisexual men compared with bisexual women and other gender identities, with a steeper regression line. Nevertheless, the regression line for lesbian women is slightly steeper than gay men, indicating that intersectionality rating may have a stronger effect on psychological impact scores for lesbian than gay. It is worth noting that while the associations between intersectionality rating and psychological impact scores were positive among asexual and pansexual women with relatively small variations, the associations were negative among asexual and pansexual men with more variations and data point proportion below the regression line. Thus, it is plausiable that the negative associations contributed significantly to the lower psychological impact scores predicted by the intersectionality rating for men respondents. 
 
 
 ```{r}
@@ -785,7 +790,7 @@ print(inter.psych.orientation.gender)
 
 ```
 
-Figure 16 illustrates that the intersectionality rating positively predicts psychological well-being scores for all racial identities. The regression line for black, asian, and indian respondents is steeper with more data points concentrated on the higher end of the intersectionality rating and psychological impact scores. This indicates that racial minorities' perceived psychological impacts by queer characters may be more influenced by the perceived character intersectionality than white respondents.
+@fig-plot-inter-psych-impact-race illustrates that the intersectionality rating positively predicts psychological well-being scores for all racial identities. The regression line for black, asian, and indian respondents is steeper with more data points concentrated on the higher end of the intersectionality rating and psychological impact scores. This indicates that racial minorities' perceived psychological impacts by queer characters may be more influenced by the perceived character intersectionality than white respondents.
 
 
 
