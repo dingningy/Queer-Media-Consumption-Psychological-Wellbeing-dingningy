@@ -330,8 +330,9 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     5. References render without error and link to the correct table/figure in pdf/html output
 
         -   [✔] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments: Tables and figures should be referenced with markdown, for example `@fig-histogram` instead of writing out "Figure 2".
+        -   Met in sub2
 
 25. Execute descriptive analyses and/or hypothesis testing in code chunks
 
@@ -393,19 +394,20 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     4. No additional steps are needed (e.g., finding data, determining necessary packages to install and load, running unsourced scripts)
 
         -   [✔] Objective attempt
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments: Some edits were required to knit the document without errors:
           1. I had to run the data analysis script separately to install some necessary packages, they did not install or load when sourcing the script, I think because it's treating it like a shiny app script.
           2. The YAML header specified "apa.csl", which does not exist and produces an error. That file is embedded in the lower level extension directory, so even if there was an apa.csl in the top directory there could be a duplication problem. Deleting the line in the header fixed the error.
+          - Met in sub2
         
 
 ## Grading
 
 All final projects are graded by Dr. Dowling. You will see your grade on Canvas separated into two categories: objective points and engagement points.
 
--   **Objective points:** 28/30
+-   **Objective points:** 30/30
 -   **Engagement points:** 10/10
--   **Total points:** 38/40
+-   **Total points:** 40/40
 
 **Comments:** Dingning, this is AWESOME! You've done so much work here, and it's all so well done. I'm really impressed with the depth and breadth of your project. You've done a great job with the data analysis, and the visualizations are fantastic. I love the shiny app, which is really above and beyond. 
 
@@ -413,3 +415,4 @@ BTW, since it isn't really part of the project that goes into the .qmd and doesn
 
 Check my comments above for a minor things to address if you want those last 2 points, but this is excellent. Great work!!
 
+Submission 2: Easily got those last 2 points. Crushed it. :)
